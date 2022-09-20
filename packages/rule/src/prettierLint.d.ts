@@ -1,0 +1,21 @@
+declare const prettierLint: {
+  printWidth: number;
+  tabWidth: number;
+  useTabs: boolean;
+  semi: boolean;
+  singleQuote: boolean;
+  quoteProps: string;
+  jsxSingleQuote: boolean;
+  trailingComma: string;
+  bracketSpacing: boolean;
+  jsxBracketSameLine: boolean;
+  arrowParens: string;
+  rangeStart: number;
+  rangeEnd: number;
+  requirePragma: boolean;
+  insertPragma: boolean;
+  proseWrap: string;
+  htmlWhitespaceSensitivity: string;
+  endOfLine: string;
+};
+export default prettierLint;

@@ -1,0 +1,18 @@
+# 过滤eslint检测文件
+*.sh
+node_modules
+*.md
+*.woff
+*.ttf
+.vscode
+.idea
+dist
+es
+vchart/
+public/
+.husky
+.local
+bin
+.umi
+Dockerfile
+*map
