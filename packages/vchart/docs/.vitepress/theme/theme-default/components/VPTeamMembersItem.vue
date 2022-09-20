@@ -1,20 +1,20 @@
 <script setup lang="ts">
-import type { DefaultTheme } from '..'
-import VPIconHeart from './icons/VPIconHeart.vue'
-import VPLink from './VPLink.vue'
-import VPSocialLinks from './VPSocialLinks.vue'
+import type { DefaultTheme } from '..';
+import VPIconHeart from './icons/VPIconHeart.vue';
+import VPLink from './VPLink.vue';
+import VPSocialLinks from './VPSocialLinks.vue';
 
 defineProps<{
-  size?: 'small' | 'medium'
-  member: DefaultTheme.TeamMember
-}>()
+  size?: 'small' | 'medium';
+  member: DefaultTheme.TeamMember;
+}>();
 </script>
 
 <template>
   <article class="VPTeamMembersItem" :class="[size ?? 'medium']">
     <div class="profile">
       <figure class="avatar">
-        <img class="avatar-img" :src="member.avatar" :alt="member.name">
+        <img class="avatar-img" :src="member.avatar" :alt="member.name" />
       </figure>
       <div class="data">
         <h1 class="name">
@@ -24,10 +24,14 @@ defineProps<{
           <span v-if="member.title" class="title">
             {{ member.title }}
           </span>
-          <span v-if="member.title && member.org" class="at">
-            @
-          </span>
-          <VPLink v-if="member.org" class="org" :class="{ link: member.orgLink }" :href="member.orgLink" no-icon>
+          <span v-if="member.title && member.org" class="at"> @ </span>
+          <VPLink
+            v-if="member.org"
+            class="org"
+            :class="{ link: member.orgLink }"
+            :href="member.orgLink"
+            no-icon
+          >
             {{ member.org }}
           </VPLink>
         </p>
@@ -52,10 +56,10 @@ defineProps<{
   display: flex;
   flex-direction: column;
   gap: 2px;
-  border-radius: 12px;
   width: 100%;
   height: 100%;
   overflow: hidden;
+  border-radius: 12px;
 }
 
 .VPTeamMembersItem.small .profile {
@@ -72,20 +76,20 @@ defineProps<{
 }
 
 .VPTeamMembersItem.small .name {
-  line-height: 24px;
   font-size: 16px;
+  line-height: 24px;
 }
 
 .VPTeamMembersItem.small .affiliation {
   padding-top: 4px;
-  line-height: 20px;
   font-size: 14px;
+  line-height: 20px;
 }
 
 .VPTeamMembersItem.small .desc {
   padding-top: 12px;
-  line-height: 20px;
   font-size: 14px;
+  line-height: 20px;
 }
 
 .VPTeamMembersItem.small .links {
@@ -108,9 +112,9 @@ defineProps<{
 }
 
 .VPTeamMembersItem.medium .name {
-  letter-spacing: 0.15px;
-  line-height: 28px;
   font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.15px;
 }
 
 .VPTeamMembersItem.medium .affiliation {
@@ -119,8 +123,8 @@ defineProps<{
 }
 
 .VPTeamMembersItem.medium .desc {
-  padding-top: 16px;
   max-width: 288px;
+  padding-top: 16px;
   font-size: 16px;
 }
 
@@ -152,19 +156,19 @@ defineProps<{
   right: 0;
   bottom: 0;
   left: 0;
-  border-radius: 50%;
   object-fit: cover;
+  border-radius: 50%;
 }
 
 .name {
-  margin:  0;
+  margin: 0;
   font-weight: 600;
 }
 
 .affiliation {
-  margin:  0;
-  font-weight: 500;
+  margin: 0;
   color: var(--vp-c-text-2);
+  font-weight: 500;
 }
 
 .org.link {
@@ -188,28 +192,28 @@ defineProps<{
 
 .sponsor-link {
   display: flex;
-  justify-content: center;
   align-items: center;
-  text-align: center;
+  justify-content: center;
   padding: 16px;
-  font-size: 14px;
-  font-weight: 500;
   color: var(--vp-c-sponsor);
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
   background-color: var(--vp-c-bg-soft);
   transition: color 0.25s, background-color 0.25s;
 }
 
 .sponsor-link:hover,
 .sponsor-link:focus {
-  outline: none;
   color: var(--vp-c-text-dark-1);
   background-color: var(--vp-c-sponsor);
+  outline: none;
 }
 
 .sponsor-icon {
-  margin-right: 8px;
   width: 16px;
   height: 16px;
+  margin-right: 8px;
   fill: currentColor;
 }
 </style>

@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { useData } from 'vitepress'
-import { useSidebar } from '../composables/sidebar'
-import VPImage from './VPImage.vue'
+import { useData } from 'vitepress';
+import { useSidebar } from '../composables/sidebar';
+import VPImage from './VPImage.vue';
 
-const { site, theme } = useData()
-const { hasSidebar } = useSidebar()
+const { site, theme } = useData();
+const { hasSidebar } = useSidebar();
 </script>
 
 <template>
@@ -25,10 +25,10 @@ const { hasSidebar } = useSidebar()
 
 @media (min-width: 960px) {
   .VPNavBarTitle.has-sidebar {
-    margin-right: 32px;
     width: calc(var(--vp-sidebar-width) - 64px);
-    border-bottom-color: var(--vp-c-divider-light);
+    margin-right: 32px;
     background-color: var(--vp-c-bg-alt);
+    border-bottom-color: var(--vp-c-divider-light);
   }
 }
 
@@ -37,9 +37,9 @@ const { hasSidebar } = useSidebar()
   align-items: center;
   width: 100%;
   height: var(--vp-nav-height);
-  font-size: 16px;
-  font-weight: 600;
   color: var(--vp-c-text-1);
+  font-weight: 600;
+  font-size: 16px;
   transition: opacity 0.25s;
 }
 
@@ -54,7 +54,7 @@ const { hasSidebar } = useSidebar()
 }
 
 :deep(.logo) {
-  margin-right: 8px;
   height: 24px;
+  margin-right: 8px;
 }
 </style>

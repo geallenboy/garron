@@ -1,32 +1,32 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-import VPFeature from './VPFeature.vue'
+import { computed } from 'vue';
+import VPFeature from './VPFeature.vue';
 
 export interface Feature {
-  icon?: string
-  title: string
-  details: string
+  icon?: string;
+  title: string;
+  details: string;
 }
 
 const props = defineProps<{
-  features: Feature[]
-}>()
+  features: Feature[];
+}>();
 
 const grid = computed(() => {
-  const length = props.features.length
+  const length = props.features.length;
 
   if (!length) {
-    return
+    return;
   } else if (length === 2) {
-    return 'grid-2'
+    return 'grid-2';
   } else if (length === 3) {
-    return 'grid-3'
+    return 'grid-3';
   } else if (length % 3 === 0) {
-    return 'grid-6'
+    return 'grid-6';
   } else if (length % 2 === 0) {
-    return 'grid-4'
+    return 'grid-4';
   }
-})
+});
 </script>
 
 <template>
@@ -34,11 +34,7 @@ const grid = computed(() => {
     <div class="container">
       <div class="items">
         <div v-for="feature in features" :key="feature.title" class="item" :class="[grid]">
-          <VPFeature
-            :icon="feature.icon"
-            :title="feature.title"
-            :details="feature.details"
-          />
+          <VPFeature :icon="feature.icon" :title="feature.title" :details="feature.details" />
         </div>
       </div>
     </div>
@@ -64,8 +60,8 @@ const grid = computed(() => {
 }
 
 .container {
-  margin: 0 auto;
   max-width: 1152px;
+  margin: 0 auto;
 }
 
 .items {
@@ -75,8 +71,8 @@ const grid = computed(() => {
 }
 
 .item {
-  padding: 8px;
   width: 100%;
+  padding: 8px;
 }
 
 @media (min-width: 640px) {

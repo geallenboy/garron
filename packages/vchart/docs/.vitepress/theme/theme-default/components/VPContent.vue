@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import { useRoute, useData } from 'vitepress'
-import { useCopyCode } from '../composables/copy-code'
-import { useSidebar } from '../composables/sidebar'
-import NotFound from '../NotFound.vue'
-import VPPage from './VPPage.vue'
-import VPHome from './VPHome.vue'
-import VPDoc from './VPDoc.vue'
+import { useRoute, useData } from 'vitepress';
+import { useCopyCode } from '../composables/copy-code';
+import { useSidebar } from '../composables/sidebar';
+import NotFound from '../NotFound.vue';
+import VPPage from './VPPage.vue';
+import VPHome from './VPHome.vue';
+import VPDoc from './VPDoc.vue';
 
-const route = useRoute()
-const { frontmatter } = useData()
-const { hasSidebar } = useSidebar()
+const route = useRoute();
+const { frontmatter } = useData();
+const { hasSidebar } = useSidebar();
 
-useCopyCode()
+useCopyCode();
 </script>
 
 <template>
@@ -52,8 +52,8 @@ useCopyCode()
 .VPContent {
   flex-grow: 1;
   flex-shrink: 0;
-  margin: 0 auto;
   width: 100%;
+  margin: 0 auto;
 }
 
 .VPContent.is-home {

@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-import { useData } from 'vitepress'
-import VPFlyout from './VPFlyout.vue'
-import VPMenuLink from './VPMenuLink.vue'
-import VPSwitchAppearance from './VPSwitchAppearance.vue'
-import VPSocialLinks from './VPSocialLinks.vue'
+import { useData } from 'vitepress';
+import VPFlyout from './VPFlyout.vue';
+import VPMenuLink from './VPMenuLink.vue';
+import VPSwitchAppearance from './VPSwitchAppearance.vue';
+import VPSocialLinks from './VPSocialLinks.vue';
 
-const { site, theme } = useData()
+const { site, theme } = useData();
 </script>
 
 <template>
@@ -55,10 +55,10 @@ const { site, theme } = useData()
 
 .trans-title {
   padding: 0 24px 0 12px;
-  line-height: 32px;
-  font-size: 14px;
-  font-weight: 700;
   color: var(--vp-c-text-1);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 32px;
 }
 
 .item.appearance,

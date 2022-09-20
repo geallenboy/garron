@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import { useData } from 'vitepress'
-import VPSocialLinks from './VPSocialLinks.vue'
+import { useData } from 'vitepress';
+import VPSocialLinks from './VPSocialLinks.vue';
 
-const { theme } = useData()
+const { theme } = useData();
 </script>
 
 <template>

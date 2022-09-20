@@ -2,6 +2,14 @@
   "name": "@garron/vchart",
   "version": "1.0.0",
   "description": "vue3-chart",
+  "keywords": [
+    "g2plot",
+    "vue3",
+    "g2",
+    "chart"
+  ],
+  "license": "MIT",
+  "author": "garron",
   "main": "lib/index.js",
   "module": "es/index.js",
   "directories": {
@@ -14,22 +22,25 @@
     "*.d.ts"
   ],
   "scripts": {
-    "dev": "vitepress dev docs",
-    "build:docs": "vitepress build docs",
-    "test": "jest",
     "build": "npm run build:es && npm run build:commonjs && npm run build:types",
-    "build:es": "cross-env BABEL_ENV=commonjs babel src -d es --extensions .ts,.tsx --delete-dir-on-start",
     "build:commonjs": "cross-env BABEL_ENV=commonjs babel src -d lib --extensions .ts,.tsx --delete-dir-on-start",
-    "build:types": "tsc --declarationDir ./lib && tsc --declarationDir ./es"
+    "build:docs": "vitepress build docs",
+    "build:es": "cross-env BABEL_ENV=commonjs babel src -d es --extensions .ts,.tsx --delete-dir-on-start",
+    "build:types": "tsc --declarationDir ./lib && tsc --declarationDir ./es",
+    "dev": "vitepress dev docs",
+    "test": "jest"
   },
-  "keywords": [
-    "g2plot",
-    "vue3",
-    "g2",
-    "chart"
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
   ],
-  "author": "garron",
-  "license": "MIT",
+  "dependencies": {
+    "@antv/g2plot": "^2.4.20",
+    "element-plus": "^2.2.17",
+    "lodash": "^4.17.20",
+    "vue": "^3.2.31"
+  },
   "devDependencies": {
     "@types/node": "^18.7.18",
     "@vitejs/plugin-vue-jsx": "^2.0.1",
@@ -47,16 +58,5 @@
     "vitepress": "^1.0.0-alpha.15",
     "vitepress-demo-editor": "^3.0.2",
     "vitepress-theme-demoblock": "^1.4.2"
-  },
-  "dependencies": {
-    "@antv/g2plot": "^2.4.20",
-    "element-plus": "^2.2.17",
-    "lodash": "^4.17.20",
-    "vue": "^3.2.31"
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+  }
 }

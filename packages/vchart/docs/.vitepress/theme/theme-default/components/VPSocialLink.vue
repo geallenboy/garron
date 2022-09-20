@@ -1,18 +1,18 @@
 <script lang="ts" setup>
-import type { DefaultTheme } from 'vitepress/theme'
-import VPIconDiscord from './icons/VPIconDiscord.vue'
-import VPIconFacebook from './icons/VPIconFacebook.vue'
-import VPIconGitHub from './icons/VPIconGitHub.vue'
-import VPIconLinkedIn from './icons/VPIconLinkedIn.vue'
-import VPIconInstagram from './icons/VPIconInstagram.vue'
-import VPIconSlack from './icons/VPIconSlack.vue'
-import VPIconTwitter from './icons/VPIconTwitter.vue'
-import VPIconYouTube from './icons/VPIconYouTube.vue'
+import type { DefaultTheme } from 'vitepress/theme';
+import VPIconDiscord from './icons/VPIconDiscord.vue';
+import VPIconFacebook from './icons/VPIconFacebook.vue';
+import VPIconGitHub from './icons/VPIconGitHub.vue';
+import VPIconLinkedIn from './icons/VPIconLinkedIn.vue';
+import VPIconInstagram from './icons/VPIconInstagram.vue';
+import VPIconSlack from './icons/VPIconSlack.vue';
+import VPIconTwitter from './icons/VPIconTwitter.vue';
+import VPIconYouTube from './icons/VPIconYouTube.vue';
 
 defineProps<{
-  icon: DefaultTheme.SocialLinkIcon
-  link: string
-}>()
+  icon: DefaultTheme.SocialLinkIcon;
+  link: string;
+}>();
 
 const icons = {
   discord: VPIconDiscord,
@@ -23,17 +23,11 @@ const icons = {
   slack: VPIconSlack,
   twitter: VPIconTwitter,
   youtube: VPIconYouTube
-}
+};
 </script>
 
 <template>
-  <a
-    class="VPSocialLink"
-    :href="link"
-    :title="icon"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
+  <a class="VPSocialLink" :href="link" :title="icon" target="_blank" rel="noopener noreferrer">
     <component :is="icons[icon]" class="icon" />
     <span class="visually-hidden">{{ icon }}</span>
   </a>
@@ -42,17 +36,17 @@ const icons = {
 <style scoped>
 .VPSocialLink {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   width: 36px;
   height: 36px;
   color: var(--vp-c-text-2);
-  transition: color .5s;
+  transition: color 0.5s;
 }
 
 .VPSocialLink:hover {
   color: var(--vp-c-text-1);
-  transition: color .25s;
+  transition: color 0.25s;
 }
 
 .icon {

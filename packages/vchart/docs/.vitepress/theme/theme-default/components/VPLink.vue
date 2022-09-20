@@ -1,14 +1,14 @@
 <script lang="ts" setup>
-import { computed } from 'vue'
-import { normalizeLink } from '../support/utils'
-import VPIconExternalLink from './icons/VPIconExternalLink.vue'
+import { computed } from 'vue';
+import { normalizeLink } from '../support/utils';
+import VPIconExternalLink from './icons/VPIconExternalLink.vue';
 
 const props = defineProps<{
-  href?: string
-  noIcon?: boolean
-}>()
+  href?: string;
+  noIcon?: boolean;
+}>();
 
-const isExternal = computed(() => props.href && /^[a-z]+:/i.test(props.href))
+const isExternal = computed(() => props.href && /^[a-z]+:/i.test(props.href));
 </script>
 
 <template>
@@ -28,11 +28,11 @@ const isExternal = computed(() => props.href && /^[a-z]+:/i.test(props.href))
 <style scoped>
 .icon {
   display: inline-block;
-  margin-top: -1px;
-  margin-left: 4px;
   width: 11px;
   height: 11px;
-  fill: var(--vp-c-text-3);
+  margin-top: -1px;
+  margin-left: 4px;
   transition: fill 0.25s;
+  fill: var(--vp-c-text-3);
 }
 </style>

@@ -1,21 +1,21 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-import { useData } from 'vitepress'
-import { normalizeLink } from '../support/utils'
-import { useEditLink } from '../composables/edit-link'
-import { usePrevNext } from '../composables/prev-next'
-import VPIconEdit from './icons/VPIconEdit.vue'
-import VPLink from './VPLink.vue'
-import VPDocFooterLastUpdated from './VPDocFooterLastUpdated.vue'
+import { computed } from 'vue';
+import { useData } from 'vitepress';
+import { normalizeLink } from '../support/utils';
+import { useEditLink } from '../composables/edit-link';
+import { usePrevNext } from '../composables/prev-next';
+import VPIconEdit from './icons/VPIconEdit.vue';
+import VPLink from './VPLink.vue';
+import VPDocFooterLastUpdated from './VPDocFooterLastUpdated.vue';
 
-const { theme, page, frontmatter } = useData()
+const { theme, page, frontmatter } = useData();
 
-const editLink = useEditLink()
-const control = usePrevNext()
+const editLink = useEditLink();
+const control = usePrevNext();
 
 const hasLastUpdated = computed(() => {
-  return page.value.lastUpdated && frontmatter.value.lastUpdated !== false
-})
+  return page.value.lastUpdated && frontmatter.value.lastUpdated !== false;
+});
 </script>
 
 <template>
@@ -62,8 +62,8 @@ const hasLastUpdated = computed(() => {
 @media (min-width: 640px) {
   .edit-info {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     padding-bottom: 14px;
   }
 }
@@ -71,11 +71,11 @@ const hasLastUpdated = computed(() => {
 .edit-link-button {
   display: flex;
   align-items: center;
-  border: 0;
-  line-height: 32px;
-  font-size: 14px;
-  font-weight: 500;
   color: var(--vp-c-brand);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 32px;
+  border: 0;
   transition: color 0.25s;
 }
 
@@ -84,15 +84,15 @@ const hasLastUpdated = computed(() => {
 }
 
 .edit-link-icon {
-  margin-right: 8px;
   width: 14px;
   height: 14px;
+  margin-right: 8px;
   fill: currentColor;
 }
 
 .prev-next {
-  border-top: 1px solid var(--vp-c-divider-light);
   padding-top: 24px;
+  border-top: 1px solid var(--vp-c-divider-light);
 }
 
 @media (min-width: 640px) {
@@ -121,11 +121,11 @@ const hasLastUpdated = computed(() => {
 
 .pager-link {
   display: block;
-  border: 1px solid var(--vp-c-divider-light);
-  border-radius: 8px;
-  padding: 11px 16px 13px;
   width: 100%;
   height: 100%;
+  padding: 11px 16px 13px;
+  border: 1px solid var(--vp-c-divider-light);
+  border-radius: 8px;
   transition: border-color 0.25s;
 }
 
@@ -144,18 +144,18 @@ const hasLastUpdated = computed(() => {
 
 .desc {
   display: block;
-  line-height: 20px;
-  font-size: 12px;
-  font-weight: 500;
   color: var(--vp-c-text-2);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
 }
 
 .title {
   display: block;
-  line-height: 20px;
-  font-size: 14px;
-  font-weight: 500;
   color: var(--vp-c-brand);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
   transition: color 0.25s;
 }
 </style>

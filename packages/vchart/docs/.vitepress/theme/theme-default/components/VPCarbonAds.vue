@@ -1,23 +1,23 @@
 <script setup lang="ts">
-import { ref, watch, onMounted } from 'vue'
-import { useData } from 'vitepress'
-import { useAside } from '../composables/aside'
+import { ref, watch, onMounted } from 'vue';
+import { useData } from 'vitepress';
+import { useAside } from '../composables/aside';
 
-const { theme } = useData()
-const carbonOptions = theme.value.carbonAds
-const { isAsideEnabled } = useAside()
-const container = ref()
+const { theme } = useData();
+const carbonOptions = theme.value.carbonAds;
+const { isAsideEnabled } = useAside();
+const container = ref();
 
-let hasInitalized = false
+let hasInitalized = false;
 
 function init() {
   if (!hasInitalized) {
-    hasInitalized = true
-    const s = document.createElement('script')
-    s.id = '_carbonads_js'
-    s.src = `//cdn.carbonads.com/carbon.js?serve=${carbonOptions.code}&placement=${carbonOptions.placement}`
-    s.async = true
-    container.value.appendChild(s)
+    hasInitalized = true;
+    const s = document.createElement('script');
+    s.id = '_carbonads_js';
+    s.src = `//cdn.carbonads.com/carbon.js?serve=${carbonOptions.code}&placement=${carbonOptions.placement}`;
+    s.async = true;
+    container.value.appendChild(s);
   }
 }
 
@@ -29,11 +29,11 @@ if (carbonOptions) {
     // otherwise, only load it if the page resizes to wide enough. this avoids
     // loading carbon at all on mobile where it's never shown
     if (isAsideEnabled.value) {
-      init()
+      init();
     } else {
-      watch(isAsideEnabled, (wide) => wide && init())
+      watch(isAsideEnabled, (wide) => wide && init());
     }
-  })
+  });
 }
 </script>
 
@@ -44,16 +44,16 @@ if (carbonOptions) {
 <style>
 .VPCarbonAds {
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 24px;
-  border-radius: 12px;
+  justify-content: center;
   min-height: 240px;
-  text-align: center;
-  line-height: 18px;
-  font-size: 12px;
+  padding: 24px;
   font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
   background-color: var(--vp-c-bg-soft);
+  border-radius: 12px;
   transition: color 0.5s, background-color 0.5s;
 }
 
@@ -77,9 +77,9 @@ if (carbonOptions) {
 .VPCarbonAds .carbon-poweredby {
   display: block;
   padding-top: 6px;
-  font-size: 11px;
-  font-weight: 500;
   color: var(--vp-c-text-2);
+  font-weight: 500;
+  font-size: 11px;
   text-transform: uppercase;
   transition: color 0.25s;
 }

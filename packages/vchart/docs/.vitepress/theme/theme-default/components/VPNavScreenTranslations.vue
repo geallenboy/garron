@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { useData } from 'vitepress'
-import VPIconChevronDown from './icons/VPIconChevronDown.vue'
-import VPIconLanguages from './icons/VPIconLanguages.vue'
+import { ref } from 'vue';
+import { useData } from 'vitepress';
+import VPIconChevronDown from './icons/VPIconChevronDown.vue';
+import VPIconLanguages from './icons/VPIconLanguages.vue';
 
-const { theme } = useData()
+const { theme } = useData();
 
-const isOpen = ref(false)
+const isOpen = ref(false);
 
 function toggle() {
-  isOpen.value = !isOpen.value
+  isOpen.value = !isOpen.value;
 }
 </script>
 
@@ -42,9 +42,9 @@ function toggle() {
 .title {
   display: flex;
   align-items: center;
-  font-size: 14px;
-  font-weight: 500;
   color: var(--vp-c-text-1);
+  font-weight: 500;
+  font-size: 14px;
 }
 
 .icon {
@@ -66,8 +66,8 @@ function toggle() {
 }
 
 .link {
-  line-height: 32px;
-  font-size: 13px;
   color: var(--vp-c-text-1);
+  font-size: 13px;
+  line-height: 32px;
 }
 </style>

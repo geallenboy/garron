@@ -29,11 +29,11 @@ npm i @garrond/vchart
 :::demo
 
 ```vue
-
 <template>
   <!-- <AreaChart v-bind="config" /> -->
   <el-button>default</el-button>
   <div>2222</div>
+  <el-button type="primary">Primary</el-button>
 </template>
 <script setup>
  

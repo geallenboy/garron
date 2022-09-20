@@ -1,19 +1,19 @@
 <script lang="ts" setup>
-import { useSidebar } from '../composables/sidebar'
-import VPIconAlignLeft from './icons/VPIconAlignLeft.vue'
+import { useSidebar } from '../composables/sidebar';
+import VPIconAlignLeft from './icons/VPIconAlignLeft.vue';
 
 defineProps<{
-  open: boolean
-}>()
+  open: boolean;
+}>();
 
 defineEmits<{
-  (e: 'open-menu'): void
-}>()
+  (e: 'open-menu'): void;
+}>();
 
-const { hasSidebar } = useSidebar()
+const { hasSidebar } = useSidebar();
 
 function scrollToTop() {
-  window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+  window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
 }
 </script>
 
@@ -29,9 +29,7 @@ function scrollToTop() {
       <span class="menu-text">Menu</span>
     </button>
 
-    <a class="top-link" href="#" @click="scrollToTop">
-      Return to top
-    </a>
+    <a class="top-link" href="#" @click="scrollToTop"> Return to top </a>
   </div>
 </template>
 
@@ -42,11 +40,11 @@ function scrollToTop() {
   left: 0;
   z-index: var(--vp-z-index-local-nav);
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid var(--vp-c-divider-light);
+  justify-content: space-between;
   width: 100%;
   background-color: var(--vp-c-bg);
+  border-bottom: 1px solid var(--vp-c-divider-light);
   transition: border-color 0.5s, background-color 0.5s;
 }
 
@@ -60,10 +58,10 @@ function scrollToTop() {
   display: flex;
   align-items: center;
   padding: 12px 24px 11px;
-  line-height: 24px;
-  font-size: 12px;
-  font-weight: 500;
   color: var(--vp-c-text-2);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 24px;
   transition: color 0.5s;
 }
 
@@ -79,19 +77,19 @@ function scrollToTop() {
 }
 
 .menu-icon {
-  margin-right: 8px;
   width: 16px;
   height: 16px;
+  margin-right: 8px;
   fill: currentColor;
 }
 
 .top-link {
   display: block;
   padding: 12px 24px 11px;
-  line-height: 24px;
-  font-size: 12px;
-  font-weight: 500;
   color: var(--vp-c-text-2);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 24px;
   transition: color 0.5s;
 }
 

@@ -1,21 +1,21 @@
 <script setup lang="ts">
-import type { DefaultTheme } from 'vitepress/theme'
-import VPButton from './VPButton.vue'
-import VPImage from './VPImage.vue'
+import type { DefaultTheme } from 'vitepress/theme';
+import VPButton from './VPButton.vue';
+import VPImage from './VPImage.vue';
 
 export interface HeroAction {
-  theme?: 'brand' | 'alt'
-  text: string
-  link: string
+  theme?: 'brand' | 'alt';
+  text: string;
+  link: string;
 }
 
 defineProps<{
-  name?: string
-  text: string
-  tagline?: string
-  image?: DefaultTheme.ThemeableImage
-  actions?: HeroAction[]
-}>()
+  name?: string;
+  text: string;
+  tagline?: string;
+  image?: DefaultTheme.ThemeableImage;
+  actions?: HeroAction[];
+}>();
 </script>
 
 <template>
@@ -72,8 +72,8 @@ defineProps<{
 .container {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
   max-width: 1152px;
+  margin: 0 auto;
 }
 
 @media (min-width: 960px) {
@@ -85,9 +85,9 @@ defineProps<{
 .main {
   position: relative;
   z-index: 10;
-  order: 2;
   flex-grow: 1;
   flex-shrink: 0;
+  order: 2;
 }
 
 .VPHero.has-image .container {
@@ -114,10 +114,10 @@ defineProps<{
 .name,
 .text {
   max-width: 392px;
-  letter-spacing: -0.4px;
-  line-height: 40px;
-  font-size: 32px;
   font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.4px;
   white-space: pre-wrap;
 }
 
@@ -141,16 +141,16 @@ defineProps<{
   .name,
   .text {
     max-width: 576px;
-    line-height: 56px;
     font-size: 48px;
+    line-height: 56px;
   }
 }
 
 @media (min-width: 960px) {
   .name,
   .text {
-    line-height: 64px;
     font-size: 56px;
+    line-height: 64px;
   }
 
   .VPHero.has-image .name,
@@ -160,13 +160,13 @@ defineProps<{
 }
 
 .tagline {
-  padding-top: 8px;
   max-width: 392px;
-  line-height: 28px;
-  font-size: 18px;
-  font-weight: 500;
-  white-space: pre-wrap;
+  padding-top: 8px;
   color: var(--vp-c-text-2);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  white-space: pre-wrap;
 }
 
 .VPHero.has-image .tagline {
@@ -175,17 +175,17 @@ defineProps<{
 
 @media (min-width: 640px) {
   .tagline {
-    padding-top: 12px;
     max-width: 576px;
-    line-height: 32px;
+    padding-top: 12px;
     font-size: 20px;
+    line-height: 32px;
   }
 }
 
 @media (min-width: 960px) {
   .tagline {
-    line-height: 36px;
     font-size: 24px;
+    line-height: 36px;
   }
 
   .VPHero.has-image .tagline {
@@ -236,16 +236,16 @@ defineProps<{
   .image {
     flex-grow: 1;
     order: 2;
-    margin: 0;
     min-height: 100%;
+    margin: 0;
   }
 }
 
 .image-container {
   position: relative;
-  margin: 0 auto;
   width: 320px;
   height: 320px;
+  margin: 0 auto;
 }
 
 @media (min-width: 640px) {
@@ -258,8 +258,8 @@ defineProps<{
 @media (min-width: 960px) {
   .image-container {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
     transform: translate(-32px, -32px);
@@ -270,12 +270,12 @@ defineProps<{
   position: absolute;
   top: 50%;
   left: 50%;
-  border-radius: 50%;
   width: 192px;
   height: 192px;
   background-image: var(--vp-home-hero-image-background-image);
-  filter: var(--vp-home-hero-image-filter);
+  border-radius: 50%;
   transform: translate(-50%, -50%);
+  filter: var(--vp-home-hero-image-filter);
 }
 
 @media (min-width: 640px) {

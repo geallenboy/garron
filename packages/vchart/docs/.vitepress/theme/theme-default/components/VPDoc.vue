@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { useRoute } from 'vitepress'
-import { useSidebar } from '../composables/sidebar'
-import VPDocAside from './VPDocAside.vue'
-import VPDocFooter from './VPDocFooter.vue'
+import { useRoute } from 'vitepress';
+import { useSidebar } from '../composables/sidebar';
+import VPDocAside from './VPDocAside.vue';
+import VPDocFooter from './VPDocFooter.vue';
 
-const { path } = useRoute()
-const { hasSidebar } = useSidebar()
+const { path } = useRoute();
+const { hasSidebar } = useSidebar();
 
-const pageName = path.replace(/[./]+/g, '_').replace(/_html$/, '')
+const pageName = path.replace(/[./]+/g, '_').replace(/_html$/, '');
 </script>
 
 <template>
@@ -48,8 +48,8 @@ const pageName = path.replace(/[./]+/g, '_').replace(/_html$/, '')
 
 <style scoped>
 .VPDoc {
-  padding: 32px 24px 96px;
   width: 100%;
+  padding: 32px 24px 96px;
 }
 
 @media (min-width: 768px) {
@@ -100,26 +100,26 @@ const pageName = path.replace(/[./]+/g, '_').replace(/_html$/, '')
 }
 
 .container {
-  margin: 0 auto;
   width: 100%;
+  margin: 0 auto;
 }
 
 .aside {
   position: relative;
   display: none;
-  order: 2;
   flex-grow: 1;
-  padding-left: 32px;
+  order: 2;
   width: 100%;
   max-width: 256px;
+  padding-left: 32px;
 }
 
 .aside-container {
   position: sticky;
   top: 0;
+  height: 100vh;
   margin-top: calc(var(--vp-nav-height-desktop) * -1 - 32px);
   padding-top: calc(var(--vp-nav-height-desktop) + 32px);
-  height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
   scrollbar-width: none;
@@ -147,8 +147,8 @@ const pageName = path.replace(/[./]+/g, '_').replace(/_html$/, '')
 
 .content {
   position: relative;
-  margin: 0 auto;
   width: 100%;
+  margin: 0 auto;
 }
 
 @media (min-width: 960px) {
@@ -160,13 +160,13 @@ const pageName = path.replace(/[./]+/g, '_').replace(/_html$/, '')
 @media (min-width: 1280px) {
   .content {
     order: 1;
-    margin: 0;
     min-width: 640px;
+    margin: 0;
   }
 }
 
 .content-container {
-  margin: 0 auto;
   max-width: 688px;
+  margin: 0 auto;
 }
 </style>

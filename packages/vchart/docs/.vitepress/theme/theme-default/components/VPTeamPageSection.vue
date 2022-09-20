@@ -34,10 +34,10 @@
 
 .title {
   position: relative;
-  margin: 0 auto;
   max-width: 1152px;
-  text-align: center;
+  margin: 0 auto;
   color: var(--vp-c-text-2);
+  text-align: center;
 }
 
 .title-line {
@@ -53,22 +53,22 @@
   position: relative;
   display: inline-block;
   padding: 0 24px;
-  letter-spacing: 0;
-  line-height: 32px;
-  font-size: 20px;
   font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 0;
   background-color: var(--vp-c-bg);
 }
 
 .lead {
-  margin: 0 auto;
   max-width: 480px;
+  margin: 0 auto;
   padding-top: 12px;
-  text-align: center;
-  line-height: 24px;
-  font-size: 16px;
-  font-weight: 500;
   color: var(--vp-c-text-2);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
 }
 
 .members {

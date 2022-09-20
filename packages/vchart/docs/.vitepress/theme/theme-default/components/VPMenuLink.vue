@@ -1,18 +1,18 @@
 <script lang="ts" setup>
-import { useData } from 'vitepress'
-import { isActive } from '../support/utils'
-import VPLink from './VPLink.vue'
+import { useData } from 'vitepress';
+import { isActive } from '../support/utils';
+import VPLink from './VPLink.vue';
 
 defineProps<{
-  item: any
-}>()
+  item: any;
+}>();
 
-const { page } = useData()
+const { page } = useData();
 </script>
 
 <template>
   <div class="VPMenuLink">
-    <VPLink 
+    <VPLink
       :class="{ active: isActive(page.relativePath, item.activeMatch || item.link) }"
       :href="item.link"
     >
@@ -24,19 +24,19 @@ const { page } = useData()
 <style scoped>
 .VPMenuGroup + .VPMenuLink {
   margin: 12px -12px 0;
-  border-top: 1px solid var(--vp-c-divider-light);
   padding: 12px 12px 0;
+  border-top: 1px solid var(--vp-c-divider-light);
 }
 
 .link {
   display: block;
-  border-radius: 6px;
   padding: 0 12px;
-  line-height: 32px;
-  font-size: 14px;
-  font-weight: 500;
   color: var(--vp-c-text-1);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 32px;
   white-space: nowrap;
+  border-radius: 6px;
   transition: background-color 0.25s, color 0.25s;
 }
 

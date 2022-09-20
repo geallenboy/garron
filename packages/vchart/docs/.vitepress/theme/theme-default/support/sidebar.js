@@ -6,24 +6,24 @@ import { ensureStartingSlash } from './utils';
  * return empty array.
  */
 export function getSidebar(sidebar, path) {
-    if (Array.isArray(sidebar)) {
-        return sidebar;
+  if (Array.isArray(sidebar)) {
+    return sidebar;
+  }
+  path = ensureStartingSlash(path);
+  for (const dir in sidebar) {
+    // make sure the multi sidebar key starts with slash too
+    if (path.startsWith(ensureStartingSlash(dir))) {
+      return sidebar[dir];
     }
-    path = ensureStartingSlash(path);
-    for (const dir in sidebar) {
-        // make sure the multi sidebar key starts with slash too
-        if (path.startsWith(ensureStartingSlash(dir))) {
-            return sidebar[dir];
-        }
-    }
-    return [];
+  }
+  return [];
 }
 export function getFlatSideBarLinks(sidebar) {
-    const links = [];
-    for (const group of sidebar) {
-        for (const link of group.items) {
-            links.push(link);
-        }
+  const links = [];
+  for (const group of sidebar) {
+    for (const link of group.items) {
+      links.push(link);
     }
-    return links;
+  }
+  return links;
 }

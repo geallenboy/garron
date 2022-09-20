@@ -1,4 +1,4 @@
-import markDownPlugin from 'vitepress-demo-editor/markdownPlugin';
+import markdownPlugin from "vitepress-demo-editor/markdownPlugin";
 
 export default {
   base: '/',
@@ -31,7 +31,7 @@ export default {
   },
   markdown: {
     config: (md) => {
-      md.use(markDownPlugin, {});
+      md.use(markdownPlugin);
     }
   }
 };

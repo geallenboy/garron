@@ -5,8 +5,8 @@
 }
 
 html {
-  line-height: 1.4;
   font-size: 16px;
+  line-height: 1.4;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -15,17 +15,17 @@ html.dark {
 }
 
 body {
-  margin: 0;
   width: 100%;
   min-width: 320px;
   min-height: 100vh;
-  line-height: 24px;
-  font-family: var(--vp-font-family-base);
-  font-size: 16px;
-  font-weight: 400;
+  margin: 0;
   color: var(--vp-c-text-1);
-  background-color: var(--vp-c-bg);
+  font-weight: 400;
+  font-size: 16px;
+  font-family: var(--vp-font-family-base);
+  line-height: 24px;
   direction: ltr;
+  background-color: var(--vp-c-bg);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -43,9 +43,9 @@ h4,
 h5,
 h6 {
   margin: 0;
-  line-height: 24px;
-  font-size: 16px;
   font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 p {
@@ -75,7 +75,7 @@ b {
 a,
 area,
 button,
-[role="button"],
+[role='button'],
 input,
 label,
 select,
@@ -91,9 +91,9 @@ a {
 
 ol,
 ul {
-  list-style: none;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 blockquote {
@@ -134,21 +134,21 @@ input,
 optgroup,
 select,
 textarea {
-  border: 0;
   padding: 0;
-  line-height: inherit;
   color: inherit;
+  line-height: inherit;
+  border: 0;
 }
 
 button {
   padding: 0;
-  font-family: inherit;;
+  font-family: inherit;
   background-color: transparent;
   background-image: none;
 }
 
 button,
-[role="button"] {
+[role='button'] {
   cursor: pointer;
 }
 
@@ -193,11 +193,11 @@ textarea::placeholder {
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
   margin: 0;
+  -webkit-appearance: none;
 }
 
-input[type="number"] {
+input[type='number'] {
   -moz-appearance: textfield;
 }
 

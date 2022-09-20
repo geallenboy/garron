@@ -1,37 +1,32 @@
 <script lang="ts" setup>
-import type { DefaultTheme } from 'vitepress/theme'
-import { ref, watchEffect } from 'vue'
-import VPIconPlusSquare from './icons/VPIconPlusSquare.vue'
-import VPIconMinusSquare from './icons/VPIconMinusSquare.vue'
-import VPSidebarLink from './VPSidebarLink.vue'
+import type { DefaultTheme } from 'vitepress/theme';
+import { ref, watchEffect } from 'vue';
+import VPIconPlusSquare from './icons/VPIconPlusSquare.vue';
+import VPIconMinusSquare from './icons/VPIconMinusSquare.vue';
+import VPSidebarLink from './VPSidebarLink.vue';
 
 const props = defineProps<{
-  text?: string
-  items: DefaultTheme.SidebarItem[]
-  collapsible?: boolean
-  collapsed?: boolean
-}>()
+  text?: string;
+  items: DefaultTheme.SidebarItem[];
+  collapsible?: boolean;
+  collapsed?: boolean;
+}>();
 
-const collapsed = ref(false)
+const collapsed = ref(false);
 watchEffect(() => {
-  collapsed.value = !!(props.collapsible && props.collapsed)
-})
+  collapsed.value = !!(props.collapsible && props.collapsed);
+});
 
 function toggle() {
   if (props.collapsible) {
-    collapsed.value = !collapsed.value
+    collapsed.value = !collapsed.value;
   }
 }
 </script>
 
 <template>
   <section class="VPSidebarGroup" :class="{ collapsible, collapsed }">
-    <div
-      v-if="text"
-      class="title"
-      :role="collapsible ? 'button' : undefined"
-      @click="toggle"
-    >
+    <div v-if="text" class="title" :role="collapsible ? 'button' : undefined" @click="toggle">
       <h2 class="title-text">{{ text }}</h2>
       <div class="action">
         <VPIconMinusSquare class="icon minus" />
@@ -49,29 +44,29 @@ function toggle() {
 
 <style scoped>
 .title {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
   z-index: 2;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .title-text {
   padding-top: 6px;
   padding-bottom: 6px;
-  line-height: 20px;
-  font-size: 14px;
-  font-weight: 700;
   color: var(--vp-c-text-1);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .action {
-  display: none;
   position: relative;
-  margin-right: -8px;
-  border-radius: 4px;
+  display: none;
   width: 32px;
   height: 32px;
+  margin-right: -8px;
   color: var(--vp-c-text-3);
+  border-radius: 4px;
   transition: color 0.25s;
 }
 
@@ -92,19 +87,27 @@ function toggle() {
   fill: currentColor;
 }
 
-.icon.minus { opacity: 1; }
-.icon.plus  { opacity: 0; }
+.icon.minus {
+  opacity: 1;
+}
+.icon.plus {
+  opacity: 0;
+}
 
-.VPSidebarGroup.collapsed .icon.minus { opacity: 0; }
-.VPSidebarGroup.collapsed .icon.plus  { opacity: 1; }
+.VPSidebarGroup.collapsed .icon.minus {
+  opacity: 0;
+}
+.VPSidebarGroup.collapsed .icon.plus {
+  opacity: 1;
+}
 
 .items {
   overflow: hidden;
 }
 
 .VPSidebarGroup.collapsed .items {
-  margin-bottom: -22px;
   max-height: 0;
+  margin-bottom: -22px;
 }
 
 @media (min-width: 960px) {

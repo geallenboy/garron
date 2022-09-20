@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import VPMenuLink from './VPMenuLink.vue'
-import VPMenuGroup from './VPMenuGroup.vue'
+import VPMenuLink from './VPMenuLink.vue';
+import VPMenuGroup from './VPMenuGroup.vue';
 
 defineProps<{
-  items?: any[]
-}>()
+  items?: any[];
+}>();
 </script>
 
 <template>
@@ -22,11 +22,11 @@ defineProps<{
 
 <style scoped>
 .VPMenu {
-  border-radius: 12px;
-  padding: 12px;
   min-width: 128px;
-  border: 1px solid var(--vp-c-divider-light);
+  padding: 12px;
   background-color: var(--vp-c-bg);
+  border: 1px solid var(--vp-c-divider-light);
+  border-radius: 12px;
   box-shadow: var(--vp-shadow-3);
   transition: background-color 0.5s;
 }
@@ -41,8 +41,8 @@ defineProps<{
 }
 
 .VPMenu :deep(.group + .group) {
-  border-top: 1px solid var(--vp-c-divider-light);
   padding: 11px 12px 12px;
+  border-top: 1px solid var(--vp-c-divider-light);
 }
 
 .VPMenu :deep(.group:last-child) {
@@ -50,8 +50,8 @@ defineProps<{
 }
 
 .VPMenu :deep(.group + .item) {
-  border-top: 1px solid var(--vp-c-divider-light);
   padding: 11px 16px 0;
+  border-top: 1px solid var(--vp-c-divider-light);
 }
 
 .VPMenu :deep(.item) {
@@ -61,11 +61,11 @@ defineProps<{
 
 .VPMenu :deep(.label) {
   flex-grow: 1;
-  line-height: 28px;
-  font-size: 12px;
-  font-weight: 500;
   color: var(--vp-c-text-2);
-  transition: color .5s;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 28px;
+  transition: color 0.5s;
 }
 
 .VPMenu :deep(.action) {

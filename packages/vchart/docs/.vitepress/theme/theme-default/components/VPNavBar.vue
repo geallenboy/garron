@@ -1,27 +1,27 @@
 <script lang="ts" setup>
-import { useSidebar } from '../composables/sidebar'
-import VPNavBarTitle from './VPNavBarTitle.vue'
-import VPNavBarSearch from './VPNavBarSearch.vue'
-import VPNavBarMenu from './VPNavBarMenu.vue'
-import VPNavBarTranslations from './VPNavBarTranslations.vue'
-import VPNavBarAppearance from './VPNavBarAppearance.vue'
-import VPNavBarSocialLinks from './VPNavBarSocialLinks.vue'
-import VPNavBarExtra from './VPNavBarExtra.vue'
-import VPNavBarHamburger from './VPNavBarHamburger.vue'
+import { useSidebar } from '../composables/sidebar';
+import VPNavBarTitle from './VPNavBarTitle.vue';
+import VPNavBarSearch from './VPNavBarSearch.vue';
+import VPNavBarMenu from './VPNavBarMenu.vue';
+import VPNavBarTranslations from './VPNavBarTranslations.vue';
+import VPNavBarAppearance from './VPNavBarAppearance.vue';
+import VPNavBarSocialLinks from './VPNavBarSocialLinks.vue';
+import VPNavBarExtra from './VPNavBarExtra.vue';
+import VPNavBarHamburger from './VPNavBarHamburger.vue';
 
 defineProps<{
-  isScreenOpen: boolean
-}>()
+  isScreenOpen: boolean;
+}>();
 
 defineEmits<{
-  (e: 'toggle-screen'): void
-}>()
+  (e: 'toggle-screen'): void;
+}>();
 
-const { hasSidebar } = useSidebar()
+const { hasSidebar } = useSidebar();
 </script>
 
 <template>
-  <div class="VPNavBar" :class="{ 'has-sidebar' : hasSidebar }">
+  <div class="VPNavBar" :class="{ 'has-sidebar': hasSidebar }">
     <div class="container">
       <VPNavBarTitle />
 
@@ -45,9 +45,9 @@ const { hasSidebar } = useSidebar()
 <style scoped>
 .VPNavBar {
   position: relative;
-  border-bottom: 1px solid var(--vp-c-divider-light);
-  padding: 0 8px 0 24px;
   height: var(--vp-nav-height-mobile);
+  padding: 0 8px 0 24px;
+  border-bottom: 1px solid var(--vp-c-divider-light);
   transition: border-color 0.5s, background-color 0.5s;
 }
 
@@ -66,9 +66,9 @@ const { hasSidebar } = useSidebar()
   .VPNavBar.has-sidebar .content {
     margin-right: -32px;
     padding-right: 32px;
+    background: rgba(255, 255, 255, 0.7);
     -webkit-backdrop-filter: saturate(50%) blur(8px);
     backdrop-filter: saturate(50%) blur(8px);
-    background: rgba(255, 255, 255, 0.7);
   }
 
   .dark .VPNavBar.has-sidebar .content {
@@ -89,15 +89,15 @@ const { hasSidebar } = useSidebar()
 .container {
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
   max-width: calc(var(--vp-layout-max-width) - 64px);
+  margin: 0 auto;
 }
 
 .content {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
   flex-grow: 1;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .menu + .translations::before,
@@ -105,12 +105,12 @@ const { hasSidebar } = useSidebar()
 .menu + .social-links::before,
 .translations + .appearance::before,
 .appearance + .social-links::before {
-  margin-right: 8px;
-  margin-left: 8px;
   width: 1px;
   height: 24px;
+  margin-right: 8px;
+  margin-left: 8px;
   background-color: var(--vp-c-divider-light);
-  content: "";
+  content: '';
 }
 
 .menu + .appearance::before,

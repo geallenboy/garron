@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import VPHomeHero from './VPHomeHero.vue'
-import VPHomeFeatures from './VPHomeFeatures.vue'
+import VPHomeHero from './VPHomeHero.vue';
+import VPHomeFeatures from './VPHomeFeatures.vue';
 </script>
 
 <template>

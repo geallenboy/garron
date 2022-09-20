@@ -1,34 +1,29 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
-import { useFlyout } from '../composables/flyout'
-import VPIconChevronDown from './icons/VPIconChevronDown.vue'
-import VPIconMoreHorizontal from './icons/VPIconMoreHorizontal.vue'
-import VPMenu from './VPMenu.vue'
+import { ref } from 'vue';
+import { useFlyout } from '../composables/flyout';
+import VPIconChevronDown from './icons/VPIconChevronDown.vue';
+import VPIconMoreHorizontal from './icons/VPIconMoreHorizontal.vue';
+import VPMenu from './VPMenu.vue';
 
 defineProps<{
-  icon?: any
-  button?: string
-  label?: string
-  items?: any[]
-}>()
+  icon?: any;
+  button?: string;
+  label?: string;
+  items?: any[];
+}>();
 
-const open = ref(false)
-const el = ref<HTMLElement>()
+const open = ref(false);
+const el = ref<HTMLElement>();
 
-useFlyout({ el, onBlur })
+useFlyout({ el, onBlur });
 
 function onBlur() {
-  open.value = false
+  open.value = false;
 }
 </script>
 
 <template>
-  <div
-    class="VPFlyout"
-    ref="el"
-    @mouseenter="open = true"
-    @mouseleave="open = false"
-  >
+  <div class="VPFlyout" ref="el" @mouseenter="open = true" @mouseleave="open = false">
     <button
       type="button"
       class="button"
@@ -81,17 +76,17 @@ function onBlur() {
 }
 
 .VPFlyout:hover .menu,
-.button[aria-expanded="true"] + .menu {
-  opacity: 1;
-  visibility: visible;
+.button[aria-expanded='true'] + .menu {
   transform: translateY(0);
+  visibility: visible;
+  opacity: 1;
 }
 
 .button {
   display: flex;
   align-items: center;
-  padding: 0 12px;
   height: var(--vp-nav-height-mobile);
+  padding: 0 12px;
   color: var(--vp-c-text-1);
   transition: color 0.5s;
 }
@@ -105,10 +100,10 @@ function onBlur() {
 .text {
   display: flex;
   align-items: center;
-  line-height: var(--vp-nav-height-mobile);
-  font-size: 14px;
-  font-weight: 500;
   color: var(--vp-c-text-1);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: var(--vp-nav-height-mobile);
   transition: color 0.25s;
 }
 
@@ -119,32 +114,32 @@ function onBlur() {
 }
 
 .option-icon {
-  margin-right: 0px;
   width: 16px;
   height: 16px;
+  margin-right: 0px;
   fill: currentColor;
 }
 
 .text-icon {
-  margin-left: 4px;
   width: 14px;
   height: 14px;
+  margin-left: 4px;
   fill: currentColor;
 }
 
 .icon {
   width: 20px;
   height: 20px;
-  fill: currentColor;
   transition: fill 0.25s;
+  fill: currentColor;
 }
 
 .menu {
   position: absolute;
   top: calc(var(--vp-nav-height-mobile) / 2 + 20px);
   right: 0;
-  opacity: 0;
   visibility: hidden;
+  opacity: 0;
   transition: opacity 0.25s, visibility 0.25s, transform 0.25s;
 }
 

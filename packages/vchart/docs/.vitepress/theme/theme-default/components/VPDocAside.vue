@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { useData } from 'vitepress'
-import VPDocAsideOutline from './VPDocAsideOutline.vue'
-import VPDocAsideCarbonAds from './VPDocAsideCarbonAds.vue'
+import { useData } from 'vitepress';
+import VPDocAsideOutline from './VPDocAsideOutline.vue';
+import VPDocAsideCarbonAds from './VPDocAsideCarbonAds.vue';
 
-const { page, theme } = useData()
+const { page, theme } = useData();
 </script>
 
 <template>

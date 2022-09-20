@@ -1,20 +1,19 @@
 <script setup lang="ts">
-  import { provide, onMounted } from 'vue'
-  import { useSidebar, useCloseSidebarOnEscape } from './composables/sidebar'
-  import VPSkipLink from './components/VPSkipLink.vue'
-  import VPBackdrop from './components/VPBackdrop.vue'
-  import VPNav from './components/VPNav.vue'
-  import VPLocalNav from './components/VPLocalNav.vue'
-  import VPSidebar from './components/VPSidebar.vue'
-  import VPContent from './components/VPContent.vue'
-  import VPFooter from './components/VPFooter.vue'
+import { provide, onMounted } from 'vue';
+import { useSidebar, useCloseSidebarOnEscape } from './composables/sidebar';
+import VPSkipLink from './components/VPSkipLink.vue';
+import VPBackdrop from './components/VPBackdrop.vue';
+import VPNav from './components/VPNav.vue';
+import VPLocalNav from './components/VPLocalNav.vue';
+import VPSidebar from './components/VPSidebar.vue';
+import VPContent from './components/VPContent.vue';
+import VPFooter from './components/VPFooter.vue';
 
+const { isOpen: isSidebarOpen, open: openSidebar, close: closeSidebar } = useSidebar();
 
-  const { isOpen: isSidebarOpen, open: openSidebar, close: closeSidebar } = useSidebar()
+useCloseSidebarOnEscape(isSidebarOpen, closeSidebar);
 
-  useCloseSidebarOnEscape(isSidebarOpen, closeSidebar)
-
-  provide('close-sidebar', closeSidebar)
+provide('close-sidebar', closeSidebar);
 </script>
 
 <template>
@@ -45,15 +44,13 @@
 
     <VPFooter />
     <slot name="layout-bottom" />
-
-
   </div>
 </template>
 
 <style scoped>
-  .Layout {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
+.Layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 </style>

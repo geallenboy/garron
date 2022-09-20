@@ -1,18 +1,18 @@
 <script setup lang="ts">
-import { provide } from 'vue'
-import { useNav } from '../composables/nav'
-import { useSidebar } from '../composables/sidebar'
-import VPNavBar from './VPNavBar.vue'
-import VPNavScreen from './VPNavScreen.vue'
+import { provide } from 'vue';
+import { useNav } from '../composables/nav';
+import { useSidebar } from '../composables/sidebar';
+import VPNavBar from './VPNavBar.vue';
+import VPNavScreen from './VPNavScreen.vue';
 
-const { isScreenOpen, closeScreen, toggleScreen } = useNav()
-const { hasSidebar } = useSidebar()
+const { isScreenOpen, closeScreen, toggleScreen } = useNav();
+const { hasSidebar } = useSidebar();
 
-provide('close-screen', closeScreen)
+provide('close-screen', closeScreen);
 </script>
 
 <template>
-  <header class="VPNav" :class="{ 'no-sidebar' : !hasSidebar }">
+  <header class="VPNav" :class="{ 'no-sidebar': !hasSidebar }">
     <VPNavBar :is-screen-open="isScreenOpen" @toggle-screen="toggleScreen" />
     <VPNavScreen :open="isScreenOpen" />
   </header>
@@ -33,9 +33,9 @@ provide('close-screen', closeScreen)
   }
 
   .VPNav.no-sidebar {
+    background: rgba(255, 255, 255, 0.7);
     -webkit-backdrop-filter: saturate(50%) blur(8px);
     backdrop-filter: saturate(50%) blur(8px);
-    background: rgba(255, 255, 255, 0.7);
   }
 
   .dark .VPNav.no-sidebar {

@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-import type { DefaultTheme } from 'vitepress/theme'
-import VPNavScreenMenuGroupLink from './VPNavScreenMenuGroupLink.vue'
+import type { DefaultTheme } from 'vitepress/theme';
+import VPNavScreenMenuGroupLink from './VPNavScreenMenuGroupLink.vue';
 
 defineProps<{
-  text?: string
-  items: DefaultTheme.NavItemWithLink[]
-}>()
+  text?: string;
+  items: DefaultTheme.NavItemWithLink[];
+}>();
 </script>
 
 <template>
@@ -26,10 +26,10 @@ defineProps<{
 }
 
 .title {
-  line-height: 32px;
-  font-size: 13px;
-  font-weight: 700;
   color: var(--vp-c-text-2);
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 32px;
   transition: color 0.25s;
 }
 </style>

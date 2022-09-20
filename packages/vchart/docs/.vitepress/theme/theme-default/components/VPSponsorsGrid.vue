@@ -1,21 +1,21 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { useSponsorsGrid } from '../composables/sponsor-grid'
+import { ref } from 'vue';
+import { useSponsorsGrid } from '../composables/sponsor-grid';
 
 export interface Sponsor {
-  name: string
-  img: string
-  url: string
+  name: string;
+  img: string;
+  url: string;
 }
 
 const props = defineProps<{
-  size?: 'xmini' | 'mini' | 'small' | 'medium' | 'big'
-  data: Sponsor[]
-}>()
+  size?: 'xmini' | 'mini' | 'small' | 'medium' | 'big';
+  data: Sponsor[];
+}>();
 
-const el = ref(null)
+const el = ref(null);
 
-useSponsorsGrid({ el, size: props.size })
+useSponsorsGrid({ el, size: props.size });
 </script>
 
 <template>

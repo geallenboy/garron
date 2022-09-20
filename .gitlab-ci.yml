@@ -14,4 +14,3 @@ build-job:
   stage: build
   script:
     - echo "Hello, build"
- 

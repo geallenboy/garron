@@ -1,33 +1,26 @@
 <script lang="ts" setup>
-import { computed, ref } from 'vue'
-import VPIconPlus from './icons/VPIconPlus.vue'
-import VPNavScreenMenuGroupLink from './VPNavScreenMenuGroupLink.vue'
-import VPNavScreenMenuGroupSection from './VPNavScreenMenuGroupSection.vue'
+import { computed, ref } from 'vue';
+import VPIconPlus from './icons/VPIconPlus.vue';
+import VPNavScreenMenuGroupLink from './VPNavScreenMenuGroupLink.vue';
+import VPNavScreenMenuGroupSection from './VPNavScreenMenuGroupSection.vue';
 
 const props = defineProps<{
-  text: string
-  items: any[]
-}>()
+  text: string;
+  items: any[];
+}>();
 
-const isOpen = ref(false)
+const isOpen = ref(false);
 
-const groupId = computed(() =>
-  `NavScreenGroup-${props.text.replace(' ', '-').toLowerCase()}`
-)
+const groupId = computed(() => `NavScreenGroup-${props.text.replace(' ', '-').toLowerCase()}`);
 
 function toggle() {
-  isOpen.value = !isOpen.value
+  isOpen.value = !isOpen.value;
 }
 </script>
 
 <template>
   <div class="VPNavScreenMenuGroup" :class="{ open: isOpen }">
-    <button
-      class="button"
-      :aria-controls="groupId"
-      :aria-expanded="isOpen"
-      @click="toggle"
-    >
+    <button class="button" :aria-controls="groupId" :aria-expanded="isOpen" @click="toggle">
       <span class="button-text">{{ text }}</span>
       <VPIconPlus class="button-icon" />
     </button>
@@ -35,17 +28,11 @@ function toggle() {
     <div :id="groupId" class="items">
       <template v-for="item in items" :key="item.text">
         <div v-if="'link' in item" :key="item.text" class="item">
-          <VPNavScreenMenuGroupLink
-            :text="item.text"
-            :link="item.link"
-          />
+          <VPNavScreenMenuGroupLink :text="item.text" :link="item.link" />
         </div>
 
         <div v-else class="group">
-          <VPNavScreenMenuGroupSection
-            :text="item.text"
-            :items="item.items"
-          />
+          <VPNavScreenMenuGroupSection :text="item.text" :items="item.items" />
         </div>
       </template>
     </div>
@@ -54,9 +41,9 @@ function toggle() {
 
 <style scoped>
 .VPNavScreenMenuGroup {
-  border-bottom: 1px solid var(--vp-c-divider-light);
   height: 48px;
   overflow: hidden;
+  border-bottom: 1px solid var(--vp-c-divider-light);
   transition: border-color 0.5s;
 }
 
@@ -69,8 +56,8 @@ function toggle() {
 }
 
 .VPNavScreenMenuGroup.open {
-  padding-bottom: 10px;
   height: auto;
+  padding-bottom: 10px;
 }
 
 .VPNavScreenMenuGroup.open .button {
@@ -84,14 +71,14 @@ function toggle() {
 
 .button {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 12px 4px 11px 0;
+  justify-content: space-between;
   width: 100%;
-  line-height: 24px;
-  font-size: 14px;
-  font-weight: 500;
+  padding: 12px 4px 11px 0;
   color: var(--vp-c-text-1);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
   transition: color 0.25s;
 }
 
@@ -102,8 +89,8 @@ function toggle() {
 .button-icon {
   width: 14px;
   height: 14px;
-  fill: var(--vp-c-text-2);
   transition: fill 0.5s, transform 0.25s;
+  fill: var(--vp-c-text-2);
 }
 
 .group:first-child {

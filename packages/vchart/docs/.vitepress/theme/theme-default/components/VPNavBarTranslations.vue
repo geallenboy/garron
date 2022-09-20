@@ -1,18 +1,14 @@
 <script lang="ts" setup>
-import { useData } from 'vitepress'
-import VPIconLanguages from './icons/VPIconLanguages.vue'
-import VPFlyout from './VPFlyout.vue'
-import VPMenuLink from './VPMenuLink.vue'
+import { useData } from 'vitepress';
+import VPIconLanguages from './icons/VPIconLanguages.vue';
+import VPFlyout from './VPFlyout.vue';
+import VPMenuLink from './VPMenuLink.vue';
 
-const { theme } = useData()
+const { theme } = useData();
 </script>
 
 <template>
-  <VPFlyout
-    v-if="theme.localeLinks"
-    class="VPNavBarTranslations"
-    :icon="VPIconLanguages"
-  >
+  <VPFlyout v-if="theme.localeLinks" class="VPNavBarTranslations" :icon="VPIconLanguages">
     <div class="items">
       <p class="title">{{ theme.localeLinks.text }}</p>
 
@@ -37,9 +33,9 @@ const { theme } = useData()
 
 .title {
   padding: 0 24px 0 12px;
-  line-height: 32px;
-  font-size: 14px;
-  font-weight: 700;
   color: var(--vp-c-text-1);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 32px;
 }
 </style>

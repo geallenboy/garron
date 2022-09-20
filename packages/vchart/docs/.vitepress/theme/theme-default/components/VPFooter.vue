@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { useData } from 'vitepress'
-import { useSidebar } from '../composables/sidebar'
+import { useData } from 'vitepress';
+import { useSidebar } from '../composables/sidebar';
 
-const { theme } = useData()
-const { hasSidebar } = useSidebar()
+const { theme } = useData();
+const { hasSidebar } = useSidebar();
 </script>
 
 <template>
@@ -19,9 +19,9 @@ const { hasSidebar } = useSidebar()
 .VPFooter {
   position: relative;
   z-index: var(--vp-z-index-footer);
-  border-top: 1px solid var(--vp-c-divider-light);
   padding: 32px 24px;
   background-color: var(--vp-c-bg);
+  border-top: 1px solid var(--vp-c-divider-light);
 }
 
 .VPFooter.has-sidebar {
@@ -35,19 +35,23 @@ const { hasSidebar } = useSidebar()
 }
 
 .container {
-  margin: 0 auto;
   max-width: var(--vp-layout-max-width);
+  margin: 0 auto;
   text-align: center;
 }
 
 .message,
 .copyright {
-  line-height: 24px;
-  font-size: 14px;
-  font-weight: 500;
   color: var(--vp-c-text-2);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
 }
 
-.message   { order: 2; }
-.copyright { order: 1; }
+.message {
+  order: 2;
+}
+.copyright {
+  order: 1;
+}
 </style>

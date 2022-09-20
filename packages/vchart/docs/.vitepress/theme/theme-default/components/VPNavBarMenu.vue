@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-import { useData } from 'vitepress'
-import VPNavBarMenuLink from './VPNavBarMenuLink.vue'
-import VPNavBarMenuGroup from './VPNavBarMenuGroup.vue'
+import { useData } from 'vitepress';
+import VPNavBarMenuLink from './VPNavBarMenuLink.vue';
+import VPNavBarMenuGroup from './VPNavBarMenuGroup.vue';
 
-const { theme } = useData()
+const { theme } = useData();
 </script>
 
 <template>

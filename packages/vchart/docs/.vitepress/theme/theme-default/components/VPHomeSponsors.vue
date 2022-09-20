@@ -1,26 +1,26 @@
 <script setup lang="ts">
-import VPIconHeart from './icons/VPIconHeart.vue'
-import VPButton from './VPButton.vue'
-import VPSponsors from './VPSponsors.vue'
+import VPIconHeart from './icons/VPIconHeart.vue';
+import VPButton from './VPButton.vue';
+import VPSponsors from './VPSponsors.vue';
 
 export interface Sponsors {
-  tier: string
-  size?: 'medium' | 'big'
-  items: Sponsor[]
+  tier: string;
+  size?: 'medium' | 'big';
+  items: Sponsor[];
 }
 
 export interface Sponsor {
-  name: string
-  img: string
-  url: string
+  name: string;
+  img: string;
+  url: string;
 }
 
 defineProps<{
-  message?: string
-  actionText?: string
-  actionLink?: string
-  data: Sponsors[]
-}>()
+  message?: string;
+  actionText?: string;
+  actionLink?: string;
+  data: Sponsors[];
+}>();
 </script>
 
 <template>
@@ -36,11 +36,7 @@ defineProps<{
       </div>
 
       <div v-if="actionLink" class="action">
-        <VPButton
-          theme="sponsor"
-          :text="actionText ?? 'Become a sponsor'"
-          :href="actionLink"
-        />
+        <VPButton theme="sponsor" :text="actionText ?? 'Become a sponsor'" :href="actionLink" />
       </div>
     </div>
   </section>
@@ -48,20 +44,20 @@ defineProps<{
 
 <style scoped>
 .VPHomeSponsors {
-  border-top: 1px solid var(--vp-c-divider-light);
   padding: 88px 24px 96px;
   background-color: var(--vp-c-bg);
+  border-top: 1px solid var(--vp-c-divider-light);
 }
 
 .container {
-  margin: 0 auto;
   max-width: 1152px;
+  margin: 0 auto;
 }
 
 .love {
-  margin: 0 auto;
   width: 28px;
   height: 28px;
+  margin: 0 auto;
   color: var(--vp-c-text-3);
 }
 
@@ -72,14 +68,14 @@ defineProps<{
 }
 
 .message {
+  max-width: 320px;
   margin: 0 auto;
   padding-top: 10px;
-  max-width: 320px;
-  text-align: center;
-  line-height: 24px;
-  font-size: 16px;
-  font-weight: 500;
   color: var(--vp-c-text-2);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
 }
 
 .sponsors {

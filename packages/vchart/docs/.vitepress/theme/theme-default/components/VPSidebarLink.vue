@@ -1,17 +1,17 @@
 <script lang="ts" setup>
-import type { DefaultTheme } from 'vitepress/theme'
-import { inject } from 'vue'
-import { useData } from 'vitepress'
-import { isActive } from '../support/utils'
-import VPLink from './VPLink.vue'
+import type { DefaultTheme } from 'vitepress/theme';
+import { inject } from 'vue';
+import { useData } from 'vitepress';
+import { isActive } from '../support/utils';
+import VPLink from './VPLink.vue';
 
 defineProps<{
-  item: DefaultTheme.SidebarItem
-}>()
+  item: DefaultTheme.SidebarItem;
+}>();
 
-const { page } = useData()
+const { page } = useData();
 
-const closeSideBar = inject('close-sidebar') as () => void
+const closeSideBar = inject('close-sidebar') as () => void;
 </script>
 
 <template>
@@ -47,8 +47,8 @@ const closeSideBar = inject('close-sidebar') as () => void
 }
 
 .link-text {
-  line-height: 20px;
-  font-size: 14px;
   font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
 }
 </style>
