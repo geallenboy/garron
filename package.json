@@ -1,12 +1,10 @@
 {
   "name": "garron",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
   "scripts": {
     "commit": "git add . && git-cz",
-    "init": "lerna bootstrap",
+    "init": "pnpm install",
+    "start": "pnpm run dev",
     "lint:eslint": "eslint --fix \"*/{rchart,rhooks,rule,utils,rcomponent}/**/*.{tsx,ts}\"",
     "lint:lint-staged": "lint-staged",
     "lint:prettier": "prettier --write  \"*/{rchart,vchart,rhooks,rule,utils,rcomponent}/**/*.{ts,tsx,md}\"",
@@ -58,5 +56,5 @@
   "engines": {
     "node": "^12 || >=14"
   },
-  "npmClient": "yarn"
+  "packageManager": "pnpm@7.1.9"
 }
