@@ -26,7 +26,7 @@ npm i @garrond/vchart
 
 设置属性`type` , 可选 `primary` `success` `info` `warning` `danger`
 
-:::demo
+:::demo column
 
 ```vue
 <template>

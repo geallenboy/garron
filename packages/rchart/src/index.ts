@@ -1,8 +1,10 @@
+import { G2, measureTextWidth } from '@antv/g2plot';
 import AreaChart, { AreaChartProps } from './plots/area';
 import BarChart, { BarChartProps } from './plots/bar';
 import BidirectionalBarChart, { BidirectionalBarChartProps } from './plots/bidirectional-bar';
 import BoxChart, { BoxChartProps } from './plots/box';
 import BulletChart, { BulletChartProps } from './plots/bullet';
+import ChordChart, { ChordChartProps } from './plots/chord';
 import ColumnChart, { ColumnChartProps } from './plots/column';
 import DualAxesChart, { DualAxesChartProps } from './plots/dual-axes';
 import FunnelChart, { FunnelChartProps } from './plots/funnel';
@@ -14,6 +16,7 @@ import PieChart, { PieChartProps } from './plots/pie';
 import RadarChart, { RadarChartProps } from './plots/radar';
 import RadialBarChart, { RadialBarChartProps } from './plots/radial-bar';
 import RoseChart, { RoseChartProps } from './plots/rose';
+import SankeyChart, { SankeyChartProps } from './plots/sankey';
 import ScatterChart, { ScatterChartProps } from './plots/scatter';
 import StockChart, { StockChartProps } from './plots/stock';
 import SunburstChart, { SunburstChartProps } from './plots/sunburst';
@@ -21,12 +24,12 @@ import TreemapChart, { TreemapChartProps } from './plots/treemap';
 import WaterfallChart, { WaterfallChartProps } from './plots/waterfall';
 import WordCloudChart, { WordCloudChartProps } from './plots/word-cloud';
 
-import { G2, measureTextWidth } from '@antv/g2plot';
-
 import AreaMap, { AreaMapConfig } from './maps/area';
 
 export type { AreaMapConfig };
 export type {
+  ChordChartProps,
+  SankeyChartProps,
   AreaChartProps,
   BarChartProps,
   BidirectionalBarChartProps,
@@ -51,6 +54,8 @@ export type {
   WordCloudChartProps
 };
 export {
+  ChordChart,
+  SankeyChart,
   G2,
   AreaMap,
   measureTextWidth,

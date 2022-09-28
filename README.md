@@ -87,8 +87,6 @@ git push
     - rule 代码规范整理
     - utils 工具函数
     - vchart vue3图表
-    - vcomponent vue业务组件
-    - vhooks vue3常用hooks封装
 
 
 

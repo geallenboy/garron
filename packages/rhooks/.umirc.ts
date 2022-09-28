@@ -1,11 +1,11 @@
 import { defineConfig } from 'dumi';
 
 export default defineConfig({
-  title: 'hooks',
+  title: 'rhooks',
   favicon: './images/logo.svg',
   logo: './images/logo.svg',
   resolve: {
-    includes: ['docs', 'src']
+    includes: ['docs']
   },
   mode: 'site',
   menus: {
@@ -21,16 +21,15 @@ export default defineConfig({
         path: '/guide'
       }
     ],
-    '/general': [
+    '/hooks': [
       {
         title: '常用hook',
-        children: ['/general/useLatest', '/general/useMount', '/general/useUnMount']
-      }
-    ],
-    '/business': [
-      {
-        title: '菜单hooks',
-        children: ['/business/useMenu']
+        children: [
+          '/hooks/useLatest',
+          '/hooks/useMount',
+          '/hooks/useUnmount',
+          '/hooks/useMemoizedFn'
+        ]
       }
     ]
   },
@@ -41,11 +40,7 @@ export default defineConfig({
     },
     {
       title: '通用Hooks',
-      path: '/general'
-    },
-    {
-      title: '业务Hooks',
-      path: '/business'
+      path: '/hooks'
     },
     {
       title: 'GitHub',

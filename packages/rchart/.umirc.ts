@@ -65,6 +65,10 @@ export default defineConfig({
       {
         title: '玫瑰图',
         children: ['/plots/rose/api', '/plots/rose/base1']
+      },
+      {
+        title: '关系图',
+        children: ['/plots/relation/api', '/plots/relation/base1', '/plots/relation/base2']
       }
     ],
     '/maps': [

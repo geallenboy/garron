@@ -62,6 +62,6 @@
     // "emitDecoratorMetadata": true,         /* Enables experimental support for emitting type metadata for decorators. */
     "skipLibCheck": true
   },
-  "include": ["src"],
+  "include": ["src", "docs/hooks/useLatest/demo"],
   "exclude": ["lib", "es", "dist"]
 }

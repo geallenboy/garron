@@ -4,7 +4,7 @@ nav:
   path: /maps
 ---
 
-# 条形图API
+# 地图API
 
 
 <API src="../../../src/maps/area/index.tsx" />

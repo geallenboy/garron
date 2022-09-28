@@ -2,7 +2,7 @@
   "name": "@garron/rhooks",
   "version": "1.0.0",
   "description": "常用 hooks",
-  "license": "ISC",
+  "license": "MIT",
   "author": "garron",
   "main": "src/index.ts",
   "directories": {
@@ -10,7 +10,7 @@
     "test": "__tests__"
   },
   "files": [
-    "src"
+    "dist"
   ],
   "scripts": {
     "dev": "dumi dev",

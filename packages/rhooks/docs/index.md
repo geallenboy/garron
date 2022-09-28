@@ -1,13 +1,20 @@
 ---
-title: garron-hooks - React Hooks Library
+title: rhooks - React Hooks Library
 hero:
-  image: /logo.svg
+  title: rhooks
   desc: 一套高质量可靠的 React Hooks 库
   actions:
     - text: 指南
       link: /guide
     - text: Hooks 列表
       link: /hooks
+features:
+  - icon: ./images/react.svg
+    title: React
+    desc: React开发
+  - icon: ./images/ts.svg
+    title: TypeScript
+    desc: 支持TypeScript
 footer:  Copyright © 2022 
 ---
 

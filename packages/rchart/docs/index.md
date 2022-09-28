@@ -9,13 +9,13 @@ hero:
     - text: 文档
       link: /guide/get-started
 features:
-  - icon: https://gw.alipayobjects.com/zos/antfincdn/SlbIagEvT7/G2plot.svg
+  - icon: /images/plot.svg
     title: G2Plot
     desc: 基于G2Plot
-  - icon: data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K
+  - icon: ./images/react.svg
     title: React
     desc: React开发
-  - icon: https://cdn.iconscout.com/icon/free/png-256/typescript-1174965.png
+  - icon: ./images/ts.svg
     title: TypeScript
     desc: 支持TypeScript
 ---

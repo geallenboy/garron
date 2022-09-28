@@ -1,5 +1,5 @@
 ---
-title: 基础运用
+title: 中国地图
 nav:
   path: /maps
 ---
