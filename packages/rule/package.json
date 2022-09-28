@@ -1,8 +1,8 @@
 {
   "name": "@garron/rule",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "项目代码规范",
-  "homepage": "",
+  "private": true,
   "license": "ISC",
   "author": "garron",
   "main": "src/index.ts",

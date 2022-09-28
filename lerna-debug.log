@@ -1,0 +1,106 @@
+0 warn deprecated --skip-git has been replaced by --no-git-tag-version --no-push
+1 silly argv {
+1 silly argv   _: [ 'publish' ],
+1 silly argv   composed: 'publish',
+1 silly argv   lernaVersion: '5.5.1',
+1 silly argv   '$0': 'lerna',
+1 silly argv   gitTagVersion: false,
+1 silly argv   'git-tag-version': false,
+1 silly argv   push: false
+1 silly argv }
+2 notice cli v5.5.1
+3 verbose rootPath /Users/garron/Desktop/geallenboy/garron
+4 info versioning independent
+5 verbose session 3afefeadb4d7f7ac
+6 verbose user-agent lerna/5.5.1/node@v16.15.1+x64 (darwin)
+7 silly argv {
+7 silly argv   _: [ 'publish' ],
+7 silly argv   composed: 'publish',
+7 silly argv   lernaVersion: '5.5.1',
+7 silly argv   gitTagVersion: false,
+7 silly argv   'git-tag-version': false,
+7 silly argv   push: false
+7 silly argv }
+8 verbose rootPath /Users/garron/Desktop/geallenboy/garron
+9 notice FYI git repository validation has been skipped, please ensure your version bumps are correct
+10 silly hasTags
+11 verbose hasTags false
+12 info Assuming all packages changed
+13 verbose updated @garron/rchart
+14 verbose updated @garron/components
+15 verbose updated @garron/rhooks
+16 verbose updated @garron/rule
+17 verbose updated @garron/utils
+18 warn version Skipping working tree validation, proceed at your own risk
+19 info execute Skipping git tag/commit
+20 info execute Skipping git push
+21 info execute Skipping releases
+22 silly lifecycle No script for "preversion" in "garron", continuing
+23 silly lifecycle No script for "preversion" in "@garron/rchart", continuing
+24 silly lifecycle No script for "preversion" in "@garron/components", continuing
+25 silly lifecycle No script for "preversion" in "@garron/rhooks", continuing
+26 silly lifecycle No script for "preversion" in "@garron/rule", continuing
+27 silly lifecycle No script for "preversion" in "@garron/utils", continuing
+28 verbose version @garron/rchart has no lockfile. Skipping lockfile update.
+29 verbose version @garron/components has no lockfile. Skipping lockfile update.
+30 verbose version @garron/rhooks has no lockfile. Skipping lockfile update.
+31 verbose version @garron/rule has no lockfile. Skipping lockfile update.
+32 verbose version @garron/utils has no lockfile. Skipping lockfile update.
+33 silly lifecycle No script for "version" in "@garron/components", continuing
+34 silly lifecycle No script for "version" in "@garron/rchart", continuing
+35 silly lifecycle No script for "version" in "@garron/utils", continuing
+36 silly lifecycle No script for "version" in "@garron/rule", continuing
+37 silly lifecycle No script for "version" in "@garron/rhooks", continuing
+38 silly lifecycle No script for "version" in "garron", continuing
+39 info publish Publishing packages to npm...
+40 warn ENOLICENSE Package @garron/rchart is missing a license.
+40 warn ENOLICENSE One way to fix this is to add a LICENSE.md file to the root of this repository.
+40 warn ENOLICENSE See https://choosealicense.com for additional guidance.
+41 silly getCurrentSHA
+42 verbose getCurrentSHA a8504aa03196a2fd692b1984e2dc9465c3f4a2d6
+43 silly lifecycle No script for "prepublish" in "garron", continuing
+44 silly lifecycle "prepare" starting in "garron"
+45 info lifecycle garron@undefined~prepare: garron@undefined
+46 silly lifecycle "prepare" finished in "garron"
+47 silly lifecycle No script for "prepublishOnly" in "garron", continuing
+48 silly lifecycle No script for "prepack" in "garron", continuing
+49 verbose pack-directory packages/rchart
+50 silly lifecycle No script for "prepublish" in "@garron/rchart", continuing
+51 silly lifecycle No script for "prepare" in "@garron/rchart", continuing
+52 silly lifecycle No script for "prepublishOnly" in "@garron/rchart", continuing
+53 silly lifecycle No script for "prepack" in "@garron/rchart", continuing
+54 silly lifecycle No script for "postpack" in "@garron/rchart", continuing
+55 verbose packed packages/rchart
+56 silly lifecycle No script for "postpack" in "garron", continuing
+57 verbose publish @garron/rchart
+58 silly FetchError: request to https://registry.npmjs.org/@garron%2frchart failed, reason: connect ETIMEDOUT 104.16.23.35:443
+58 silly     at ClientRequest.<anonymous> (/Users/garron/Desktop/geallenboy/garron/node_modules/minipass-fetch/lib/index.js:130:14)
+58 silly     at ClientRequest.emit (node:events:527:28)
+58 silly     at TLSSocket.socketErrorListener (node:_http_client:454:9)
+58 silly     at TLSSocket.emit (node:events:539:35)
+58 silly     at emitErrorNT (node:internal/streams/destroy:157:8)
+58 silly     at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+58 silly     at processTicksAndRejections (node:internal/process/task_queues:83:21)
+58 silly  FetchError: request to https://registry.npmjs.org/@garron%2frchart failed, reason: connect ETIMEDOUT 104.16.23.35:443
+58 silly     at ClientRequest.<anonymous> (/Users/garron/Desktop/geallenboy/garron/node_modules/minipass-fetch/lib/index.js:130:14)
+58 silly     at ClientRequest.emit (node:events:527:28)
+58 silly     at TLSSocket.socketErrorListener (node:_http_client:454:9)
+58 silly     at TLSSocket.emit (node:events:539:35)
+58 silly     at emitErrorNT (node:internal/streams/destroy:157:8)
+58 silly     at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+58 silly     at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+58 silly   code: 'ETIMEDOUT',
+58 silly   errno: 'ETIMEDOUT',
+58 silly   syscall: 'connect',
+58 silly   address: '104.16.23.35',
+58 silly   port: 443,
+58 silly   type: 'system'
+58 silly }
+59 error ETIMEDOUT request to https://registry.npmjs.org/@garron%2frchart failed, reason: connect ETIMEDOUT 104.16.23.35:443
+60 error FetchError: request to https://registry.npmjs.org/@garron%2frchart failed, reason: connect ETIMEDOUT 104.16.23.35:443
+60 error     at ClientRequest.<anonymous> (/Users/garron/Desktop/geallenboy/garron/node_modules/minipass-fetch/lib/index.js:130:14)
+60 error     at ClientRequest.emit (node:events:527:28)
+60 error     at TLSSocket.socketErrorListener (node:_http_client:454:9)
+60 error     at TLSSocket.emit (node:events:539:35)
+60 error     at emitErrorNT (node:internal/streams/destroy:157:8)
+60 error     at emitErrorCloseNT (node:internal/streams/destroy:122:3)
