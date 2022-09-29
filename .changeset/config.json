@@ -1,6 +1,12 @@
 {
   "$schema": "https://unpkg.com/@changesets/config@2.1.1/schema.json",
-  "changelog": "@changesets/cli/changelog",
+  "changelog": [
+    "@changesets/cli/changelog",
+    {
+      // 这个是 github 上的包路径
+      "repo": "https://github.com/geallenboy/garron"
+    }
+  ],
   "commit": false,
   "fixed": [],
   "linked": [],

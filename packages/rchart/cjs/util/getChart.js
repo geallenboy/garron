@@ -1,11 +1,11 @@
-"use strict";
+'use strict';
 
-Object.defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, '__esModule', {
   value: true
 });
 exports.getChart = void 0;
 
-var _util = require("@antv/util");
+var _util = require('@antv/util');
 
 /**
  * 获取或者绑定图表实例

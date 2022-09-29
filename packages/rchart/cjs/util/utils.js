@@ -1,21 +1,19 @@
-"use strict";
+'use strict';
 
-Object.defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, '__esModule', {
   value: true
 });
 exports.isType = exports.getType = exports.deepClone = exports.clone = void 0;
 
 // 类型检测
 const isType = (value, type) => {
-  const {
-    toString
-  } = {};
+  const { toString } = {};
   return toString.call(value) === `[object ${type}]`;
 };
 
 exports.isType = isType;
 
-const getType = n => {
+const getType = (n) => {
   return Object.prototype.toString.call(n).slice(8, -1);
 };
 /**
@@ -23,10 +21,9 @@ const getType = n => {
  * @param source 要深克隆的目标对象
  */
 
-
 exports.getType = getType;
 
-const deepClone = source => {
+const deepClone = (source) => {
   if (!source || typeof source !== 'object') {
     return source;
   }
@@ -34,11 +31,11 @@ const deepClone = source => {
   let target;
 
   if (Array.isArray(source)) {
-    target = source.map(item => deepClone(item));
+    target = source.map((item) => deepClone(item));
   } else {
     target = {};
-    Object.keys(source).forEach(key => {
-      return target[key] = deepClone(source[key]);
+    Object.keys(source).forEach((key) => {
+      return (target[key] = deepClone(source[key]));
     });
   }
 
@@ -47,7 +44,7 @@ const deepClone = source => {
 
 exports.deepClone = deepClone;
 
-const clone = source => {
+const clone = (source) => {
   if (!source) {
     return source;
   }

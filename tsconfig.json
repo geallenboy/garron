@@ -2,16 +2,16 @@
   "compilerOptions": {
     /* Basic Options */
     // "incremental": true,                   /* 启用增量编译 */
-    "target": "esnext"                        /*指定ECMAScript目标版本: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019' or 'ESNEXT'. */,
-    "module": "esnext"                        /* 指定模块代码生成: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */,
+    "target": "esnext" /*指定ECMAScript目标版本: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019' or 'ESNEXT'. */,
+    "module": "esnext" /* 指定模块代码生成: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */,
     // "lib": [],                             /* 指定要包含在编译中的库文件. */
     // "allowJs": true,                       /* 允许编译javascript文件 */
     // "checkJs": true,                       /* 报告.js文件中的错误. */
-    "jsx": "react"                            /* 指定JSX代码生成: 'preserve', 'react-native', or 'react'. */,
-    "declaration": true                       /* 生成相应的.d.ts的文件 */,
+    "jsx": "react" /* 指定JSX代码生成: 'preserve', 'react-native', or 'react'. */,
+    "declaration": true /* 生成相应的.d.ts的文件 */,
     "emitDeclarationOnly": true,
     // "declarationMap": true,                /* 为每个对应的'.d '生成一个源映射.ts的文件. */
-    "sourceMap": true,                     /* 生成相应的” .map 的文件 */
+    "sourceMap": true /* 生成相应的” .map 的文件 */,
     // "outFile": "./",                       /* 将输出连接到单个文件. */
     // "outDir": "./lib"                      /* 将输出结构重定向到目录. */,
     // "rootDir": "./src"                        /* 指定输入文件的根目录。使用——outDir来控制输出目录结构. */,
@@ -20,13 +20,13 @@
     // "removeComments": true,                /* 不向输出发出注释. */
     // "noEmit": true                         /* Do not emit outputs. */,
     // "importHelpers": true,                 /* 从'tslib'导入emit helper。 */
-    "downlevelIteration": true,            /* 当针对'ES5'或'ES3'时，对'for-of'、spread和解构中的可迭代对象提供全面支持。. */
+    "downlevelIteration": true /* 当针对'ES5'或'ES3'时，对'for-of'、spread和解构中的可迭代对象提供全面支持。. */,
     // "isolatedModules": true,               /* 将每个文件编译为一个单独的模块(类似于'ts.transpileModule') */
 
     /* Strict Type-Checking Options */
-    "strict": true                            /* 启用所有严格的类型检查选项 */,
+    "strict": true /* 启用所有严格的类型检查选项 */,
     // "noImplicitAny": true,                 /* 对于带有隐含'any'类型的表达式和声明会引发错误. */
-    "strictNullChecks": true,              /* 启用严格的空检查. */
+    "strictNullChecks": true /* 启用严格的空检查. */,
     // "strictFunctionTypes": true,           /* 启用严格的函数类型检查。 */
     // "strictBindCallApply": true,           /* 在函数上启用严格的'bind'、'call'和'apply'方法. */
     // "strictPropertyInitialization": true,  /* 启用严格检查类中的属性初始化. */
@@ -34,20 +34,20 @@
     // "alwaysStrict": true,                  /* 以严格模式进行解析，并为每个源文件发出“use strict”。 */
 
     /* Additional Checks */
-    "noUnusedLocals": true                    /* 报告未使用局部变量的错误 */,
+    "noUnusedLocals": true /* 报告未使用局部变量的错误 */,
     // "noUnusedParameters": true,            /* 报告未使用参数的错误 */
     // "noImplicitReturns": true,             /* 当不是函数中的所有代码路径都返回值时报告错误. */
     // "noFallthroughCasesInSwitch": true,    /* 报告switch语句中失效情况的错误*/
 
     /* Module Resolution Options */
-    "moduleResolution": "node"                /* 指定模块解析策略:'node' (node .js)或'classic' (TypeScript 1.6之前的版本)。 */,
-    "baseUrl": ".",                       /* 基目录解析非绝对模块名. */
+    "moduleResolution": "node" /* 指定模块解析策略:'node' (node .js)或'classic' (TypeScript 1.6之前的版本)。 */,
+    "baseUrl": "." /* 基目录解析非绝对模块名. */,
     // "paths": {},                           /* 将导入重新映射到相对于'baseUrl'的查找位置的一系列条目*/
     // "rootDirs": [],                        /* 根文件夹的列表，其组合内容表示项目在运行时的结构. */
     // "typeRoots": [],                       /* 要包含其中类型定义的文件夹列表. */
     // "types": [],                           /* 键入要包含在编译中的声明文件. */
-    "allowSyntheticDefaultImports": true,  /* 允许从没有默认导出的模块进行默认导入。这并不影响代码发出，只是类型检查 */
-    "esModuleInterop": true                   /* 通过为所有导入创建命名空间对象，实现CommonJS和ES模块之间的互操作性。意味着“allowSyntheticDefaultImports”. */,
+    "allowSyntheticDefaultImports": true /* 允许从没有默认导出的模块进行默认导入。这并不影响代码发出，只是类型检查 */,
+    "esModuleInterop": true /* 通过为所有导入创建命名空间对象，实现CommonJS和ES模块之间的互操作性。意味着“allowSyntheticDefaultImports”. */,
     // "preserveSymlinks": true,              /* 不解析符号链接的真实路径. */
     // "allowUmdGlobalAccess": true,          /* 允许从模块访问UMD全局变量. */
 
