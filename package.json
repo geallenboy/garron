@@ -1,5 +1,5 @@
 {
-  "name": "garron",
+  "name": "root",
   "private": true,
   "workspaces": [
     "packages/*"
@@ -57,6 +57,5 @@
   },
   "engines": {
     "node": "^12 || >=14"
-  },
-  "npmClient": "yarn"
+  }
 }
