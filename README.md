@@ -16,11 +16,12 @@
 
 ## 3. 使用
 
-### 3.1 全局安装
+### 3.1 安装依赖
 
 ```
-npm i learn -g 
-npm i commitizen -g
+pnpm i 
+
+pnpm i -F packages-name
 ```
 
 ### 3.2 下载包
