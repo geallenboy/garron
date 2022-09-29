@@ -8,8 +8,12 @@
     "lint:eslint": "eslint --fix \"*/{rchart,rhooks,rule,utils,rcomponent}/**/*.{tsx,ts}\"",
     "lint:lint-staged": "lint-staged",
     "lint:prettier": "prettier --write  \"*/{rchart,vchart,rhooks,rule,utils,rcomponent}/**/*.{ts,tsx,md}\"",
-    "prepare": "husky install",
-    "uninit": "lerna clean && rimraf node_modules"
+    "clear": "rimraf 'packages/*/{lib,node_modules}' && rimraf node_modules",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "pnpm build && pnpm release:only",
+    "release:only": "changeset publish --registry=https://registry.npmjs.com/",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "packages/{rchart,rhooks,rule,utils,rcomponent}/**/*.{tsx,ts}": [
@@ -49,12 +53,11 @@
     "cz-customizable": "^7.0.0",
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.1",
-    "lerna": "^5.4.2",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1"
   },
   "engines": {
-    "node": "^12 || >=14"
+    "node": ">=14"
   },
-  "packageManager": "pnpm@7.1.9"
+  "packageManager": "pnpm@7.5.1"
 }
