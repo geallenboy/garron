@@ -1,6 +1,6 @@
 {
   "name": "@garron/rhooks",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "常用 hooks",
   "private": true,
   "license": "MIT",
