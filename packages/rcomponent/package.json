@@ -2,7 +2,7 @@
   "name": "@garron/components",
   "version": "1.0.0",
   "description": "components",
-  "homepage": "",
+  "private": true,
   "license": "ISC",
   "author": "garron",
   "main": "src/index",

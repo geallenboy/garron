@@ -2,17 +2,23 @@
   "name": "@garron/rule",
   "version": "1.0.0",
   "description": "项目代码规范",
-  "homepage": "",
   "license": "ISC",
   "author": "garron",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "directories": {
-    "lib": "src",
+    "dist": "dist",
     "test": "__tests__"
   },
   "files": [
-    "src"
+    "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geallenboy/garron.git"
+  },
   "scripts": {
     "build": "rimraf dist && tsc --build tsconfig.json",
     "test": "node ./__tests__/rule.test.js"

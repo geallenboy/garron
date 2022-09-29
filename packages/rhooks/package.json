@@ -2,6 +2,7 @@
   "name": "@garron/rhooks",
   "version": "1.0.0",
   "description": "常用 hooks",
+  "private": true,
   "license": "MIT",
   "author": "garron",
   "main": "src/index.ts",

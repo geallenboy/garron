@@ -8,10 +8,9 @@ dist/
 
 # production
 es/
-cjs/
 docs-dist/
 lib/
-
+cjs/
 # misc 
 
 coverage/
