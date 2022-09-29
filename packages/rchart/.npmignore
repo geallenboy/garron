@@ -5,6 +5,7 @@ types
 tests
 public
 src
+.husky
 .umirc
 babel.config.js
 jest.config.js
