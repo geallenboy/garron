@@ -17,9 +17,7 @@
   },
   "lint-staged": {
     "packages/{rchart,rhooks,rule,utils,rcomponent}/**/*.{tsx,ts}": [
-      "eslint --cache --fix ."
-    ],
-    "packages/{rchart,rhooks,rule,utils,rcomponent}/**/*.{tsx,ts,md}": [
+      "eslint --cache --fix .",
       "prettier -w ."
     ]
   },

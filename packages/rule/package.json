@@ -1,16 +1,23 @@
 {
   "name": "@garron/rule",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "项目代码规范",
-  "license": "ISC",
+  "license": "MIT",
   "author": "garron",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "keywords": [
+    "eslint"
+  ],
   "directories": {
-    "dist": "dist",
-    "test": "__tests__"
+    "test": "__tests__",
+    "lib": "lib"
   },
   "files": [
-    "dist"
+    "lib",
+    "es",
+    "typings",
+    "*.d.ts"
   ],
   "publishConfig": {
     "access": "public"
@@ -20,11 +27,14 @@
     "url": "git+https://github.com/geallenboy/garron.git"
   },
   "scripts": {
-    "build": "rimraf dist && tsc --build tsconfig.json",
-    "test": "node ./__tests__/rule.test.js"
+    "build": "npm run build:es && npm run build:commonjs && npm run build:types",
+    "build:commonjs": "cross-env BABEL_ENV=commonjs babel src -d lib --extensions .ts --delete-dir-on-start",
+    "build:es": "cross-env BABEL_ENV=es babel src -d es --extensions .ts --delete-dir-on-start",
+    "build:types": "tsc --declarationDir ./lib && tsc --declarationDir ./es"
   },
   "devDependencies": {
     "@types/node": "^17.0.23",
+    "cross-env": "^7.0.3",
     "rimraf": "^3.0.2"
   }
 }

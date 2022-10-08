@@ -9,8 +9,8 @@
 ## 📦 安装
 
 ```bash
-$ npm install --save @garron/hooks
+$ npm install --save @garron/rhooks
 # or
-$ yarn add @garron/hooks
+$ yarn add @garron/rhooks
 ```
 

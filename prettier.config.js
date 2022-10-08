@@ -1,4 +1,4 @@
-const { prettierLint } = require('./packages/rule/dist');
+const { prettierLint } = require('./packages/rule');
 
 module.exports = {
   ...prettierLint

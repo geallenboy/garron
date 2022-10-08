@@ -1,4 +1,4 @@
-const { reactLint } = require('./packages/rule/dist');
+const { reactLint } = require('./packages/rule');
 
 module.exports = {
   ...reactLint,
