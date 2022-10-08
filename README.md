@@ -30,12 +30,6 @@ pnpm i -F packages-name
 npm run commit 
 git push
 ```
-或者
-```
-git add .
-git cz
-git push
-```
 
 
 
@@ -60,10 +54,8 @@ git push
     - rchart react图表
     - rcomponent react业务组件
     - rhooks react常用hooks封装
-    - plugin 插件开发
     - rule 代码规范整理
     - utils 工具函数
-    - vchart vue3图表
 
 
 

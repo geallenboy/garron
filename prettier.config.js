@@ -1,4 +1,4 @@
-const { prettierLint } = require('./packages/rule');
+const { prettierLint } = require('@garron/rule');
 
 module.exports = {
   ...prettierLint
