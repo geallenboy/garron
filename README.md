@@ -12,7 +12,7 @@
 - 代码规范：[EditorConfig](http://editorconfig.org) + [Prettier](https://prettier.io/) + [ESLint](https://eslint.org/)
 - 提交规范：[Commitizen](http://commitizen.github.io/cz-cli/) + [Commitlint](https://commitlint.js.org/#/)
 - 单元测试：[jest](https://jestjs.io/) + [ts-jest](https://kulshekhar.github.io/ts-jest/)
-- 项目管理：[learn](https://lerna.js.org/)
+- 项目管理：[pnpm](https://www.pnpm.cn/)
 
 ## 3. 使用
 
@@ -22,30 +22,6 @@
 pnpm i 
 
 pnpm i -F packages-name
-```
-
-### 3.2 下载包
-
-``` base
-yarn run init or npm run init
-```
-
-### 3.3 删除包
-
-```
-yarn run uninit or npm run unint
-```
-
-### 3.4 添加包
-
-```
-# 将react安装到所有模块
-lerna add react
-# 将 module1 安装到 module2
-lerna add module1 --scope=module2 
-# 将 react 安装到 module2
-lerna add react --scope=module2
-
 ```
 
 ### 代码提交

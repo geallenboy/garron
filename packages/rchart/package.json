@@ -30,11 +30,11 @@
     "url": "git+https://github.com/geallenboy/garron.git"
   },
   "scripts": {
-    "build": "npm run build:es & npm run build:commonjs",
+    "build": "npm run build:es && npm run build:commonjs && npm run build:types",
     "build:commonjs": "cross-env BABEL_ENV=commonjs babel src -d lib --extensions .ts,.tsx --delete-dir-on-start",
     "build:docs": "dumi build",
     "build:es": "cross-env BABEL_ENV=es babel src -d es --extensions .ts,.tsx --delete-dir-on-start",
-    "build:types": "tsc --declarationDir ./lib & tsc --declarationDir ./es",
+    "build:types": "tsc --declarationDir ./lib && tsc --declarationDir ./es",
     "dev": "dumi dev",
     "test": "jest -u",
     "test-cov": "jest -u --coverage"

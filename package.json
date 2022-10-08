@@ -11,7 +11,7 @@
     "clear": "rimraf 'packages/*/{lib,node_modules}' && rimraf node_modules",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "pnpm build && pnpm release:only",
+    "release": "pnpm --recursive --stream build && pnpm release:only",
     "release:only": "changeset publish --registry=https://registry.npmjs.com/",
     "prepare": "husky install"
   },
