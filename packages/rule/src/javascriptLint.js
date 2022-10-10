@@ -4,7 +4,7 @@
  *   eslint
  *   babel-eslint
  */
- module.exports  = {
+module.exports = {
   parser: 'babel-eslint',
   parserOptions: {
     ecmaVersion: 2019,

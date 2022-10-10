@@ -1,8 +1,11 @@
 {
   "$schema": "https://unpkg.com/@changesets/config@2.1.1/schema.json",
-  "changelog": ["@changesets/cli/changelog",{
-    "repo": "geallenboy/garron"
-  }],
+  "changelog": [
+    "@changesets/cli/changelog",
+    {
+      "repo": "geallenboy/garron"
+    }
+  ],
   "commit": false,
   "fixed": [],
   "linked": [["@garron/*"]],
@@ -12,5 +15,5 @@
   "ignore": [],
   "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
     "onlyUpdatePeerDependentsWhenOutOfRange": true
-}
+  }
 }

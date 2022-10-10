@@ -4,7 +4,7 @@
  *   @typescript-eslint/parser
  *   @typescript-eslint/eslint-plugin
  */
- module.exports = {
+module.exports = {
   parser: '@typescript-eslint/parser', //定义typescript ESLint的解析器
   plugins: ['@typescript-eslint'], //定义了typescript-eslint文件所依赖的插件
   env: {

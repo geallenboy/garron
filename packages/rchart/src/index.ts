@@ -24,12 +24,14 @@ import TreemapChart, { TreemapChartProps } from './plots/treemap';
 import WaterfallChart, { WaterfallChartProps } from './plots/waterfall';
 import WordCloudChart, { WordCloudChartProps } from './plots/word-cloud';
 import TinyLineChart, { TinyLineChartProps } from './plots/tiny-line';
+import TinyColumnChart, { TinyColumnChartProps } from './plots/tiny-column';
 import RingProgressChart, { RingProgressChartProps } from './plots/ring-progress';
 import TinyAreaChart, { TinyAreaChartProps } from './plots/tiny-area';
 import AreaMap, { AreaMapConfig } from './maps/area';
 
 export type { AreaMapConfig };
 export type {
+  TinyColumnChartProps,
   TinyAreaChartProps,
   RingProgressChartProps,
   TinyLineChartProps,
@@ -59,6 +61,7 @@ export type {
   WordCloudChartProps
 };
 export {
+  TinyColumnChart,
   TinyAreaChart,
   RingProgressChart,
   TinyLineChart,
