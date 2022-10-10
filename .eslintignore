@@ -12,7 +12,10 @@ vchart/
 public/
 .husky
 .local
+es
+lib
 bin
 .umi
+.umi-production
 Dockerfile
 *map

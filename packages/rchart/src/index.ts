@@ -23,11 +23,16 @@ import SunburstChart, { SunburstChartProps } from './plots/sunburst';
 import TreemapChart, { TreemapChartProps } from './plots/treemap';
 import WaterfallChart, { WaterfallChartProps } from './plots/waterfall';
 import WordCloudChart, { WordCloudChartProps } from './plots/word-cloud';
-
+import TinyLineChart, { TinyLineChartProps } from './plots/tiny-line';
+import RingProgressChart, { RingProgressChartProps } from './plots/ring-progress';
+import TinyAreaChart, { TinyAreaChartProps } from './plots/tiny-area';
 import AreaMap, { AreaMapConfig } from './maps/area';
 
 export type { AreaMapConfig };
 export type {
+  TinyAreaChartProps,
+  RingProgressChartProps,
+  TinyLineChartProps,
   ChordChartProps,
   SankeyChartProps,
   AreaChartProps,
@@ -54,6 +59,9 @@ export type {
   WordCloudChartProps
 };
 export {
+  TinyAreaChart,
+  RingProgressChart,
+  TinyLineChart,
   ChordChart,
   SankeyChart,
   G2,

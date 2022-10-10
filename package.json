@@ -16,7 +16,7 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "packages/{rchart,rhooks,rule,utils,rcomponent}/**/*.{tsx,ts}": [
+    "packages/{rchart,rhooks,rule,utils,rcomponent}/src/**/*.{tsx,ts}": [
       "eslint --cache --fix .",
       "prettier -w ."
     ]
