@@ -1,4 +1,4 @@
-const stylelintLint = {
+module.exports = {
   root: true,
   plugins: ['stylelint-order'],
   customSyntax: 'postcss-html',
@@ -92,4 +92,3 @@ const stylelintLint = {
   ]
 };
 
-export default stylelintLint;

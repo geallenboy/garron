@@ -22,6 +22,9 @@
 pnpm i 
 
 pnpm i -F packages-name
+
+pnpm changeset publish --tag beta
+
 ```
 
 ### 代码提交

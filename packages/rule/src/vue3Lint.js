@@ -1,7 +1,5 @@
-// @ts-check
-// import { defineConfig } from 'eslint-define-config';
 
-const vue3Lint = {
+module.exports = {
   root: true,
   env: {
     browser: true,
@@ -78,5 +76,3 @@ const vue3Lint = {
     'vue/multi-word-component-names': 'off'
   }
 };
-
-export default vue3Lint;

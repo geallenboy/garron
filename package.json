@@ -4,12 +4,12 @@
   "scripts": {
     "commit": "git add . && git-cz",
     "init": "pnpm install",
-    "start": "pnpm run dev",
     "lint:eslint": "eslint --fix \"*/{rchart,rhooks,rule,utils,rcomponent}/**/*.{tsx,ts}\"",
     "lint:lint-staged": "lint-staged",
     "lint:prettier": "prettier --write  \"*/{rchart,vchart,rhooks,rule,utils,rcomponent}/**/*.{ts,tsx,md}\"",
     "clear": "rimraf 'packages/*/{lib,node_modules}' && rimraf node_modules",
     "changeset": "changeset",
+    "build": "pnpm --filter=@garron/* run build",
     "version-packages": "changeset version",
     "release": "pnpm --recursive --stream build && pnpm release:only",
     "release:only": "changeset publish --registry=https://registry.npmjs.com/",
@@ -26,18 +26,7 @@
       "path": "node_modules/cz-customizable"
     }
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
+  
   "devDependencies": {
     "@changesets/changelog-github": "^0.4.6",
     "@changesets/cli": "^2.24.4",
@@ -59,6 +48,18 @@
   },
   "engines": {
     "node": ">=14"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "packageManager": "pnpm@7.5.1"
 }

@@ -4,7 +4,7 @@
  *   eslint
  *   babel-eslint
  */
-const javascriptLint = {
+ module.exports  = {
   parser: 'babel-eslint',
   parserOptions: {
     ecmaVersion: 2019,
@@ -931,5 +931,3 @@ const javascriptLint = {
     ]
   }
 };
-
-export default javascriptLint;

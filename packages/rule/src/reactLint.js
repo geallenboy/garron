@@ -1,4 +1,4 @@
-const reactLint = {
+module.exports = {
   root: true,
   parser: '@typescript-eslint/parser', //定义ESLint的解析器
   plugins: [
@@ -45,5 +45,3 @@ const reactLint = {
     'prettier/prettier': ['error', {}, { usePrettierrc: true }]
   }
 };
-
-export default reactLint;

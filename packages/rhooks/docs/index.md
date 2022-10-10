@@ -28,15 +28,15 @@ footer:  Copyright © 2022
 ## 📦 安装
 
 ```bash
-$ npm install --save @garron/hooks
+$ npm install --save @garron/rhooks
 # or
-$ yarn add @garron/hooks
+$ yarn add @garron/rhooks
 ```
 
 ## 🔨 使用
 
 ```ts
-import { useRequest } from '@garron/hooks';
+import { useRequest } from '@garron/rhooks';
 ```
 
 
