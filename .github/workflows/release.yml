@@ -50,7 +50,23 @@ jobs:
           publish: pnpm release
           # 消耗 changeset 文件的命令；不需要自定义可不填
           version: pnpm changeset version
-        # 此步骤的环境变量，下一步讲解
+        # 环境变量
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # build
+      - name: packages/rchart build
+         # 通过前面章节定义的命令行执行代码扫描
+        run: cd packages/rchart && pnpm run build:docs
+      - name: Deploy 🚀
+        uses: cross-the-world/scp-pipeline@master
+        env:
+          WELCOME: "ssh scp ssh pipelines"
+          LASTSSH: "Doing something after copying"
+        with:
+         host: ${{ secrets.SERVER_IP }}
+         user: ${{ secrets.USERNAME }}
+         pass: ${{ secrets.PASSWORD }}
+         connect_timeout: 10s
+         local: './packages/rchart/dist/*'
+         remote: /www/wwwroot/garron/rchart
