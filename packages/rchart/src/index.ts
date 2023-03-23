@@ -27,9 +27,7 @@ import TinyLineChart, { TinyLineChartProps } from './plots/tiny-line';
 import TinyColumnChart, { TinyColumnChartProps } from './plots/tiny-column';
 import RingProgressChart, { RingProgressChartProps } from './plots/ring-progress';
 import TinyAreaChart, { TinyAreaChartProps } from './plots/tiny-area';
-import AreaMap, { AreaMapConfig } from './maps/area';
 
-export type { AreaMapConfig };
 export type {
   TinyColumnChartProps,
   TinyAreaChartProps,
@@ -68,7 +66,6 @@ export {
   ChordChart,
   SankeyChart,
   G2,
-  AreaMap,
   measureTextWidth,
   AreaChart,
   BarChart,
